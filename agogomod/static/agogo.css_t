@@ -32,6 +32,7 @@ div.header, div.content, div.footer {
 
 div.header-wrapper {
   background: {{ theme_headerbg }};
+  background: #3465A4;
   border-bottom: 3px solid #2e3436;
 }
 
@@ -74,15 +75,11 @@ h1, h2, h3, h4 {
   font-weight: normal;
   color: {{ theme_headercolor2 }};
   margin-bottom: .8em;
+}
+
+.content-wrapper h1, h2, h3, h4 {
   border-bottom: 1px solid {{ theme_headercolor2 }};
-}
-
-h1 {
-  color: {{ theme_headercolor1 }};
-}
-
-h2 {
-  padding-bottom: .5em;
+  padding-bottom: .3em;
 }
 
 a.headerlink {
@@ -179,6 +176,7 @@ div.body {
 
 div.document ul {
   margin: 1.5em;
+  margin-top: .5em;
   list-style-type: square;
 }
 
@@ -451,4 +449,8 @@ div.viewcode-block:target {
     background-color: #f4debf;
     border-top: 1px solid #ac9;
     border-bottom: 1px solid #ac9;
+}
+
+.toctree-wrapper {
+  margin-top: 10px;
 }
