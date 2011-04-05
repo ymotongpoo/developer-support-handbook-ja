@@ -64,6 +64,8 @@
            <p>
            You can purchase a <a href="http://www.lulu.com/product/paperback/developer-support-handbook/15214068">print copy</a> or <a href="http://www.lulu.com/product/ebook/developer-support-handbook/15213896">download a PDF</a> at Lulu.com.
            </p>
+           <br>
+           <p>You can also checkout the source files from <a href="http://code.google.com/p/developer-support-handbook/">Google Code</a>.</p>
         </div>
         <div class="clearer"></div>
       </div>
@@ -74,6 +76,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
+
           {%- for rellink in rellinks|reverse %}
           <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
              {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
@@ -88,6 +91,7 @@
 
         <div class="right">
           {{ super() }}
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="float: right; margin-left: 5px; border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />The materials are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>.
         </div>
         <div class="clearer"></div>
       </div>
