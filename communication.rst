@@ -1,206 +1,163 @@
-Communication
+커뮤니케이션
 #############
 
-There are many times when you'll want to send a message to your
-developers, and there are (and should be) multiple possible venues
-for that message. There are some messages that are just for fun,
-there are some absolutely business-critical messages that will
-affect API implementations in production, and there are some
-messages that are targeted at gaining more developers. All these
-messages belong in different places, summarized here:
+API를 제공하는 동안 개발자에게 다양한 메시지를 보내야할때가 많은데, 
+메세지를 보내는 방법은 여러가지가 있다. 단순히 재미를 위한 메시지, 
+제품 구현에 영향을 미치는 중요한 메시지, 혹은 특정 분야의 개발자 모집을 
+위한 메시지 등 다양한 내용과 형태의 글을 개발자에게 보내기 위해서는 
+아래 요약된 각각 다른 수단을 이용 해야한다 : 
 
--  :ref:`blog`: New features, highlighted apps, relevant events -
-   basically, feel good stuff.
--  :ref:`notify-list`: Major bugs, new releases, heads up about
-   upcoming changes.
--  :ref:`twitter`: Re-tweets of relevant tweets, tweets pointing to
-   blog posts or other links, replies to developers.
--  :ref:`discussion-forum`: Re-posts of notify list/blog/twitter, if
-   any of them require discussion.
--  :ref:`newsletter`: Summary or subset of all of the above, but in a
-   nice, readable format.
-
+-  :ref:`blog`: 새로운 기능, 중요한 앱, 관련 이벤트와 같이 편하게 받아 들일 수 있는 내용
+-  :ref:`notify-list`: 주요 버그, 새로운 배포판 안내, 주요 수정 예정사항 등
+-  :ref:`twitter`: 문의에 대한 응답, 블로그 글이나 기타 링크 내용을 포함한 트윗, 관련된 리트윗 등
+-  :ref:`discussion-forum`: 공지사항/블로그 글/트위터 등 토론을 필요로 하는 내용들에 대한 재 게시물 
+-  :ref:`newsletter`: 위에 언급된 내용들을 읽기 쉬운 형태로 요약한 것
 
 .. _blog:
 
-Blog
-****
+블로그
+******
 
-It used to be that a blog was used for everything, from the mundane
-(bugs/outages/release notes) to the new and exciting features. Now,
-blogs have turned into such an art form and attracted such a wide
-audience from the hardcore developer to the curious pseudo-geek
-that it no longer makes sense to put the more mundane items in a
-blog. Blogs have become, it seems, a vehicle for marketing, and it
-looks a bit strange to market an outage (unless a massive apology
-is called for). So, on your blog, focus on the good stuff - the
-stuff that will get people exciteed.
+평범한 내용(버그/장애/제품 소개서)에서 부터 새롭고 기발한 기능에 이르기까지 
+어떤 것이든 블로그의 글감으로 쓰여질 수 있다. 최근 블로그는 핵심 개발자와
+호기심 많은 파워 유저에 이르기까지 다양한 독자들에게 매력적으로 다가서기 위해 
+평범한 글감은 더이상 사용하지 않는 추세로 변했다. 블로그는 조금 이상하게 보이겠지만 
+장애(큰 사과를 요하지 않는 수준의)에 대한 마케팅 수단이 되었다. 가급적
+블로그에는 사람들의 흥미를 끌만한 재미있는 글감에 초점을 맞추는 것이 좋다. 
 
-New Features
-============
+새로운 기능
+===========
 
-When you have a new feature in the API, announce it with a blog
-post, and include a demo that shows off the feature. Even small
-features can have fun demos, if you get creative enough.
+API에 새롭게 추가된 기능이 있다면 해당 기능을 보여줄 수 있는 데모와 함께 
+블로그 포스트를 통해 공개하라. 작은 기능이라도 창의적이고 재미있는
+데모를 함게 제공하는 편을 권장한다.
 
-On the Maps API blog, I created a `zombie shoot-them-up`_ to announce
-``GScreenOverlay``, a feature that was actually not terribly exciting
-and was redundant with existing functionality, and I
-created a `digital clock`_ to show off ``GMarker.setImage()``.
-You should always, of course, have a demo that shows off the standard
-usage of the new feature, but feel free to have some fun with the launch
-demo in the blog post.
+본인의 경우 Maps API 블로그를 통해 ``GScreenOverlay`` 기능을 공개하며 
+해당 기능을 이용한 `슈팅 게임 <http://googlemapsapi.blogspot.com/2007/10/map-of-dead-screen-overlayed-shoot-em_31.html>`_ 데모를 제공하였다. 
+사실 ``GScreenOverlay`` 는 아주 새롭거나 재미있는 기능은 아니었다. 
+또한, ``GMarker.setImage()`` 기능의 경우 `디지털 시계 <http://googlemapsapi.blogspot.com/2007/04/gmarkershow-american-for-clock.html>`_ 데모를 제공하였다. 
+새로운 기능을 제공하는 경우 데모를 통해 표준 사용법을 보여주는 것이 좋지만, 
+재미있는 데모를 보여주는 것에 부담을 느낄 필요는 없다. 
 
-.. _zombie shoot-them-up: http://googlemapsapi.blogspot.com/2007/10/map-of-dead-screen-overlayed-shoot-em_31.html
-.. _digital clock: http://googlemapsapi.blogspot.com/2007/04/gmarkershow-american-for-clock.html
+행사 안내
+=========
 
-Upcoming Events
-===============
+API와 관련된 이벤트 - 직접 주최하거나 다른 사람이 자발적인-에 대해  
+참석률을 높이기 위해 블로그 포스트를 통해 입소문을 내주는 것이 좋다. 
+컨퍼런스 직전과 같이 많은 이벤트가 열리는 경우 일정과 참석 링크들을 
+각각 요약하여 포스팅 하기 바란다. 2008년 5월에 열리는 이벤트를 정리한 
+`행사 계획 <http://googlemapsapi.blogspot.com/2008/05/upcoming-events.html>`_ 과 시애틀에서 열리는 개발자 행사만 정리한 
+`행사 계획 http://googlegeodevelopers.blogspot.com/2009/08/upcoming-seattle-geo-apis-hackathon.html`_ 을 참고하기 바란다.
 
-When you know of upcoming events related to the API - whether
-they're organized by you or an external developer - boost their
-attendance by posting about them on the blog. If there are a lot of
-events coming up (as often happens in "conference season"), you can
-do a summary blog post with the dates and registration links for
-each of them. Here's an `upcoming events blog post`_ from May 2008, and
-`another post`_ highlighting just a hackathon in Seattle.
+비싼 참가비가 아깝지 않을 만큼 규모 있고 많은 개발자가 참여해는 대형 행사
+외에  주변에서 열리는 작은 이벤트 역시 개발자의 관심을 보여주기 때문에 좋다. 
+가끔 구글은 샌프란시스코만 연안에서만 이벤트를 개최하고 그 지역 개발자에게만
+집중하는 것처럼 보이겠지만 전혀 사실과 다르다. 아래 리스트업 된 최근에 개최된 
+국제적 규모의 이벤트를 열고 있다.
 
-Some of the larger events will be relevant to all of your developers,
-as they'll be big enough to warrant the cost of flying in, but even if
-the smaller events are nowhere near most of your developers, it's still good to
-demonstrate that there is a worldwide developer presence. Often at
-Google, it can seem as if we only hold events in the bay area and
-only care about the developers there, but it's not actually the
-case (anymore), and hopefully our recent international events blog
-posts demonstrate that.
+(역자주) 한국에서는 Daum에서 매년 3~4회씩 총 10차례의 외부 개발자 행사인 
+`Daum DevDay <http://dna.daum.net/devday>`_ 를 개최해 왔으며, 관련 업계와 
+연합으로 `대한민국 매쉬업 경진대회 <http://mashupkorea.org>`_ 를 개최하고 있다.
 
-.. _upcoming events blog post: http://googlemapsapi.blogspot.com/2008/05/upcoming-events.html
-.. _another post: http://googlegeodevelopers.blogspot.com/2009/08/upcoming-seattle-geo-apis-hackathon.html
+행사 요약
+=========
 
-Event Summaries
-===============
+이벤트 종료 후 이벤트에서 사용된 발표자료나 동영상 등을 포스팅하는 것이 
+매우 중요하다.  많은 개발자이 동영상를 보고 발표자료를 넘기며 배우고 
+싶어한다. 따라서 그들이 보기 쉽도록 교육 자료를 만들어 공유해야 한다. 
 
-After an event happens, consider posting a round-up of the event on
-the blog - particularly if there are slides or videos from the
-talks at the event. A lot of developers like to learn by watching
-videos or flipping through slides, so you can get more bang for
-your buck by making those resources available online and pointing
-to them.
+구글 마운틴 뷰 캠퍼스에서 20명 미만의 지도 개발자을 대상으로 토크 행사를 
+개최했다. 해당 영상을 녹화한 동영상을 블로그에 올린 후, 이를 다시 모아 
+정리한 `행사 요약 블로그 글`_ 을 게시했는데 그 중 20,000번 정도 재생된 
+동영상도 있다. 겨우 20명 남짓한 개발자를 대상으로한 이벤트를 개최했는데 
+1,000배 넘는 사용자에게 까지 내용이 전달되었다니 정말 놀랍지 않은가? 
+인터넷을 통한 구전 효과를 과소 평가 하지 말기 바란다. 
 
-We held a series of talks for a small audience of ~20 geo
-developers at our Google Mountain View campus, posted the videos
-online, and after linking to them from a `summary blog post`_
-and a fewother places, the top videos have 15-20,000 views. It's amazing
-that you can hold an event for 20 developers and reach 1000 times
-that amount. Never under-estimate the power of the viral internet.
+.. _행사 요약 블로그 글: http://googlemapsapi.blogspot.com/2008/04/our-first-google-geo-developer-series.html
 
-.. _summary blog post: http://googlemapsapi.blogspot.com/2008/04/our-first-google-geo-developer-series.html
+API 이용 사례 공유
+==================
 
+API를 색다르게 사용한 예제를 소개하는 것도 좋은 방법이다.서드파티 웹사이트나 
+협력사에서 기발한 방법으로 API를 활용한 예가 있다면 그들의 동의를 얻어 API를 
+활용한 방식을 설명하고 간단히 활용할 팁등을 소개하는 것도 좋은 방법이다. 
 
-Highlighted API Uses
-====================
+LonelyPlanet이 모바일 폰에서 정적 지도 API를 어떻게 최적화했는지 
+`블로그 소개 <http://googlemapsmania.blogspot.com/2007/04/lonely-planet-innovates-using-google.html>`_
+를 통해 확인할 수 있다. 또, Travellr가 사용한 복잡하긴 하지만 효과적인 고난이도의 클러스터링 기법 역시 
+`블로그 소개 <http://googlegeodevelopers.blogspot.com/2009/06/travellr-behind-scenes-of-our-region.html>`_
+를 통해 확인 가능하다. 물론 기술적 유용성 만큼이나 개발자/개발사에서 해당 기능을 
+공개 했는지 여부를 확인하는것도 중요하다. ( '-' 이 표시에 오타가 있는건지 잘 해석이 안되네요) 
 
-Another way you can use your blog is to highlight different uses of
-your API. If you find a third party website that uses the API in an
-amazing way, or if you have a partner that you've been working with
-that you want to highlight, then ask them to do a blog post that
-explains their use of the API and gives some tips.
+새로운 기능을 발표하며 개발자이 서로 다른 방법으로 사용하는 예를 보여주고 싶다면, 
+각각 다른 방법으로 개발&적용한 사이트를 묶어 요약된 형태로 보여주면 된다. 
+필자의 경우 스트리트뷰 API를 활용한 `블로그 소개 <http://googlemapsapi.blogspot.com/2008/04/streetview-in-wild-flourishing-species.html>`_
+를 작성하기 전에, 포럼에 해당 기능을 활용한 예제를 올려주면 선물을(schwag) 주겠다고 약속했다. 
+결과적으로 새로운 프로덕트나 데모들을 찾고 관련 개발자/회사와 관계를 맺어 주는 최고의 방법이었다. 
+필자는 API를 발표하며 해당 사이트들의 절반 가량을 인용하고 있다. 
 
-LonelyPlanet wrote an
-`informational blog post <http://googlemapsmania.blogspot.com/2007/04/lonely-planet-innovates-using-google.html>`_
-for our blog about how they optimized their use of the Static Maps
-API for use on mobile phones, and Travellr wrote a
-`blog post <http://googlegeodevelopers.blogspot.com/2009/06/travellr-behind-scenes-of-our-region.html>`_
-explaining their complex but highly effective clustering technique.
-Just make sure that a guest blog post isn't -just- showing off that
-developer/company - it needs to be technically useful as well.
+또다른 예로, 정적 지도 API를 사용하는 Tip을 시리즈 형태로 정리한 
+`블로그 소개 <http://googlegeodevelopers.blogspot.com/2008/07/5-ways-to-use-static-maps-plus-new.html>`_
+를 주목하기 바란다. 이와 같은 글을 통해 개발자이 API사용법을 흉내내며 
+다양하게 사용해 보고 새로운 영감을 받게 되길 기대할 수 있다. 
 
-If you recently launched a new feature and you want to show off the
-different ways that developers are using it, then you can write a
-post that summarizes a couple different sites. Before writing this
-`blog post <http://googlemapsapi.blogspot.com/2008/04/streetview-in-wild-flourishing-species.html>`_
-about the use of the StreetView API, I solicited links in the forum
-and promised schwag for any links that I featured. It was a great
-way of making new connections and finding good, demo-able sites. I
-still show off half of those sites when I present on that API.
-Another example is this
-`blog post <http://googlegeodevelopers.blogspot.com/2008/07/5-ways-to-use-static-maps-plus-new.html>`_
-summing up ways of using the Static Maps API, and framing it as a
-series of tips with links, in the hope that other developers would
-be inspired to emulate the techniques.
+기념일
+======
 
-Holidays
-========
+기념일을 이용한 앱 개발 방식을 홍보하기 위해 블로그를 활용하는 것을 추천한다. 
+공휴일이면 물론 가족과 함께 휴가를 보내는게 가장 좋은 방법이겠지만, 다른 좋은 
+방법을 찾으라면 앱 데모를 작성하는 것이다.
 
-Finally, you can use your blog for seasonal fun. Yes, you should
-probably be spending your holidays with your family, but writing
-holiday demos has got to be the second best way to celebrate.
+내가 첫번째로 작성한 `첫 휴일 블로그 글`_ 에는 발렌타인데이 메시지를 
+구글 어스위에 표시해 주는 앱을 포함되어 있었다. (남자친구에게 기본 메시지를 
+보내는 경우 두번씩 카운팅 하도록 만들었다). 그 다음으로 3월의 시작을 선언하며 
+마커를 활용하는 `3월 마커 이벤트`_ 와 `부활절 달걀 찾기`_ 를 시리즈 형태로 작성하였다. 
+할로윈 데이에는 `좀비 죽이기`_ 를 크리스마스에는 강력한 지도 API를 활용한 
+`산타클로스 트래커`_ (구글 지도상에서는 어떤 것이든 추적할 수 있다)를 작성하였다. 
+첫번째로 만든 발렌타인데이 데모 포스트의 1주년을 맞았을때 `1주년 기념카드`_ 를 만들었다. 
+당시 싱글이었던 탓에 조금은 외로웠고, 될 수 있으면 연인을 깨고 싶은 데모도 작성했었다. 
+덕분에 나와 같은 처지의 개발자과 같은 재미를 느낄 수 있었다. 
 
-My `first holiday blog post`_ was an app to scratch a valentines day message
-in the earth (and I made it count double by having the default message a
-dedication to my boyfriend of the time). I then declared March to be the
-month of `March Marker Madness`_ and rolled out a series of marker-related
-posts, including an `easter egg hunt`_.
-For Halloween, I wrote the `zombie shoot-em-up`_, and for Christmas, I wrote
-up how we used the Maps API to power the `Santa Tracker`_ (we can track everything
-at Google). I celebrated the anniversary of my first holiday blog post
-with a Valentine's Day `greeting card maker`_, but since I was single
-that year and a bit bitter, I also wrote a
-break-as-many-hearts-as-you-can game. Hey, if I was single, there's
-a good chance that a portion of my developer audience was single
-and feeling the same urge.
+이상에서 본 바와 같이 기념일은 새롭고 기발한 방벙으로 API를 활용해 개성과 재치를 
+표출하기에 좋은 기회임에 틀림없다.
 
-As you can see, holidays can be a great opportunity to bring out
-the personality and fun in your blog, and give you an excuse to use your
-API in new and wacky ways.
-
-.. _first holiday blog post: http://googlemapsapi.blogspot.com/2007/02/write-your-valentines-day-messages-in.html
-.. _March Marker Madness: http://googlemapsapi.blogspot.com/2007/03/march-marker-madness-gmarkeroptions.html
-.. _easter egg hunt: http://googlemapsapi.blogspot.com/2007/04/marker-managed-easter-egg-hunt.html
-.. _zombie shoot-em-up: http://googlemapsapi.blogspot.com/2007/10/map-of-dead-screen-overlayed-shoot-em_31.html
-.. _Santa Tracker: http://googlemapsapi.blogspot.com/2007/12/dont-stare-out-window-to-track-santa.html
-.. _greetings card maker: http://googlemapsapi.blogspot.com/2008/02/send-geo-located-valentines-day-card.html
+.. _첫 휴일 블로그 글: http://googlemapsapi.blogspot.com/2007/02/write-your-valentines-day-messages-in.html
+.. _3월 마커 이벤트: http://googlemapsapi.blogspot.com/2007/03/march-marker-madness-gmarkeroptions.html
+.. _부활절 달걀 찾기: http://googlemapsapi.blogspot.com/2007/04/marker-managed-easter-egg-hunt.html
+.. _좀비 죽이기: http://googlemapsapi.blogspot.com/2007/10/map-of-dead-screen-overlayed-shoot-em_31.html
+.. _산타클로스 트래커: http://googlemapsapi.blogspot.com/2007/12/dont-stare-out-window-to-track-santa.html
+.. _1주년 기념카드: http://googlemapsapi.blogspot.com/2008/02/send-geo-located-valentines-day-card.html
 
 
 Personality
 ===========
 
-Continuing on that note - an official API blog is still intended to
-be authored by individuals, and individuals should maintain their
-own personalities. Feel free to inject your individuality,
-emotions, and childhood stories into your posts, as that will make
-them more readable and bring your audience closer to you. Just
-don't go as far as revealing something like your home address -
-there are creepy people in the world, and creepy people tend to use
-the internet.
-
+공식 API블로그는 여전히 개인에 의해서 관리되고 있는데 개인적 관점/관심사 등을 
+드러내는 것에 부담을 갖을 필요는 없다. 개인적인 관심사나 감정, 어릴적 이야기 
+등을 통해 독자들이 훨씬 편안하게 블로그를 구독하게 되고 친근감을 느끼게 될것이다. 
+다만 어디에나 이상한 사람들은 있기 마련이고, 그 들이 인터넷을 사용할 수 도 있으니 
+집 주소와 같은 개인정보가 드러나는 것에는 주의를 해야 한다.
 
 .. _notify-list:
 
 Notify List
 ***********
 
-Some developers don't care about the "fluff" - they're using your
-API in production, and they just want to know about the news that
-will affect their current code. They don't have the time to sift
-through blog posts and forum discussions to find the relevant news.
-This is the purpose of the notify list - a read-only announcements
-list that contains all business, nothing frivolous: new releases,
-major bugs/outages, and heads ups on upcoming changes or upgrades.
+일부 개발자은 API를 통해 제품을 개발하고 있으면서도 자신의 코드에 직접적 관련이 없는 
+소식들에 대해 무관심한 경우가 종종 있다. 그들은 자신의 코드에 당장 영향을 미치는 경우에 
+대해서만 알고 싶어하는데 문제는 그들이 블로그나 포럼에서 진행되는 토론을 통해 개발과 관련된 뉴스를 찾기 
+쉽지 않다는데 있다. 바로 그때 필요한 것이 공지 사항이다. 공지사항에는 비즈니스와
+관련된 중요한 것들이 포함되어 있다. : 새로운 배포판, 주요 버그/장애, 이벤트나 업그레이드 소식 등 
 
 New Releases
 ============
 
-For v2 of the Google Maps API, every new release is potentially relevant to
-all developers, as it is unfortunately the case that a new release
-may break any version of the API (*not a good practice*). If a
-developer is looking at their website and suddenly seeing some new
-or different behavior with their map, they know that they can check the notify
-list to see when a release happened and determine if it was
-related. In our release posts, we describe bugs fixed, link to a
-full changelog, and remind developers to post in the forum to
-discuss any changes they're seeing. For example, ere's an example post
-announcing release `2.171`_ of Maps API v2.
+구글 지도 API 버전 2의 경우, 새 배포판들이 잠재적으로 모든 개발자에게 여향을 미칠 수 있었다. 
+실제로 불행히도 새로운 배포판이 일부 버전의 API와 충돌을 일으키기도 했다 (*좋지 않은 예*) 
+멀쩡하게 작동되던 지도가 갑자기 이상 증세를 보이면, 개발자은 공지 사항을 체크해서 
+언제 새로운 배포판이 나왔는지를 확인하고 호환성 여부를 체크해야 했다. 
+배포 안내를 작성할때는 수정된 버그, 모든 변경사항, 변경사항과 관련된 포럼 링크 등을
+모두 포함한다. 지도 API 버전 2의 `2.171`_ 배포안내 포스트를 참고하라. 
 
 .. _2.171: http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/5a2abe7b3ba79479
 
@@ -208,248 +165,197 @@ announcing release `2.171`_ of Maps API v2.
 Major Bugs/Outages
 ==================
 
-It is unfortunately the case that shit happens, and shit is even
-more likely to happen to an web API. When a major bug
-happens in your API, your goal as an API provider is to eliminate
-that bug or find a way to prevent your developers from experiencing
-it, and keep your developers informed along the way.
+일반적으로 웹 API가 버그나 장애 등에 더 취약한 편이다. 만약 API상에 중대한 
+버그가 발생됐다면, API 제공자들은 버그를 제거하고 개발자이 만든 제품에 
+버그가 발생하지 않도록 지속적으로 관련 정보를 제공하여 가이드해줘야 한다.   
 
-As soon as you discover a bug that affects the majority or a
-significantly large number of your developers (or users of their apps),
-you should post to the list acknowledging awareness of the bug,
-list any known workarounds, and promise that you are working on it.
-Once the bug is resolved (hopefully within a matter of hours if
-it's a big one), post again to the list and inform developers that
-everything is working as expected again. Here's
-`the post I wrote <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/17ed31a7694a0f3b#>`_
-when we discovered our HTTP Geocoder's XML output was invalid for
-everyone, and here's
-`the follow-up <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/5efe1347cda3b96c#>`_
-when it was resolved.
+상당한 피해가 예상되거나 광범위한 영향을 미치는 버그를 발견하는 대로 
+개발자(혹은 그들이 만든 앱의 사용자들)에게 버그 발견 소식과 회피방법 등을 알려주고 
+버그 패치에 대해서 약속해야 한다. 버그가 해결되면 (수시간내 해결될만한 건이라 기대하며) 
+모든게 다시 제대로 동작하고 있다는 걸 알려줘야 한다.
+`the post I wrote <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/17ed31a7694a0f3b#>`_ 는
+ HTTP Geocoder의 XML결과값이 잘못된 오류를 발견했을 때 작성했던 글이고, 
+`the follow-up <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/5efe1347cda3b96c#>`_ 는
+해결 후에 작성한 것이다. 
 
-You should develop some criteria for deciding what a critical bug
-is for your own API, so that you don't spam the list for little
-issues that don't affect many developers (those are serviced fine
-in the issue tracker).
+일부 사용자에게만 영향을 미치는 사소한 버그라면 공지사항을 남발하는 대신 
+이슈 트래커를 사용하는 편을 택하기 바란다. 그렇게 하려면 중대 버그인지 
+여부를 판단할 수 있는 기준을 마련하는 것이 중요하다. 
 
 Heads Ups
 =========
 
-There are times in the (infinite?) lifetime of an API when you will
-want to either change the behavior of some existing functionality,
-or perhaps even deprecate a piece of functionality. Now, usually,
-when you deprecate part of a Web API, you will almost always have
-to keep it around for a good while or forever, but atleast you do
-not have to make further fixes to it, and you can make sure new
-developers do not use it. The notify group is a great way to let
-developer know that these kind of API changes are coming.
+API를 제공하는 동안 기존 기능의 동작방식을 변경하거나 혹은 사용을 
+금지하게 할 때가 있다. 일반적으로, 웹 API의 일부 기능 사용을 막을때는 해당 기능을 더 이상
+유지보수 하지는 않더라도 호환성을 위해 지속적으로 유지해야한다. 필요하다면 API를 종료할때까지 
+유지해야 한다. 물론 더이상 개발자이 해당 기능을 사용하지 않도록 확실히 해두어 한다. 
 
-When you're quite certain that the change is coming (i.e. the
-launch is approved or the code is submitted), make a post to the
-list that describes the change and the expected nearest date it
-could happen. Try to do this post atleast a month in advance, in
-case any developers want to change their code. (You may think it's
-an easy change to make, but you never know what sort of Q&A/release
-process a developer has to go through). Here's a
+공지 그룹을 이용하여 개발자에게 API변경 사항에 대해 알려 주는 방법을 추천한다. 
+
+변경이 (i.e. 서비스 개시가 승인되거나 코드가 제출됐을때 처럼) 확실해지면 
+변경사항들과 예상일시 등을 목록으로 정리하여 공표하라. 개발자이 공지사항을 보고 
+코드를 수정해야 하는 경우도 있으므로, 최소 한달 이전에 공표하는 것이 좋다. 
+(변경사항을 공표하는걸 쉽게 생각할지도 모르겠지만, 개발자로 부터 어떤 종류의 
+Q&A가 들어올지 전혀 예측할 수 없다.) 
+이벤트 발생 방식을 변경하며 작성한 
 `post I wrote <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/2da3acb76e6189a4>`_
-about a change in the firing of an event, and here's a
-`post <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/944510a20db1b4ab>`_
-about a change in the look and feel to a control. As you can see,
-these are the kind of changes that may not necessarily warrant a
-change in the documentation, and don't count as a breakage, but may
-easily break assumptions that a developer's code makes. So, when in
-doubt, let developers know!
+과, 컨트롤의 룩앤필을 변경하며 작성한 `post <http://groups.google.com/group/google-maps-api-notify/browse_frm/thread/944510a20db1b4ab>`_
+글이다. 보면 알겠지만 문서상에 변경사항을 보증하는 내용을 넣지 않아도 되고, 장애로 
+체크 되지 않을 변경이다. 그렇지만, 개발자이 작성한 코드가 제대로 동작할 것이라는 
+가정이 무너진다면, 그것도 쉽게 무너지게 된다면 어떨까?
+결국 조금이라도 의심스럽다면 개발자에게 변경사항을 공유하는게 제일 좋다. 
 
 
 Technology
 ==========
 
-We use a Google Group for our notify list, as that means that it
-can be read online, subscribed to via RSS, or subscribed to via
-email, and that's the kind of flexibility that developers need. To
-get developers to subscribe, we put a subscription box on the
-landing page of each API, and we link to it from the FAQ about
-support. It would be better if there was a consistent way to link to
+우리는 구글 그룹을 통해 공지 사항을 전파한다. 구글 그룹을 사용함으로써 
+개발자이 온라인을 통해 쉽게 읽을 수 있고 RSS나 email을 이용하여 
+구독할 수 있으니 다양한 개발자의 요구사항을 충족시킬수 있는 좋은 방법이라 생각한다. 
+
+구독자를 늘리기 위해 각 API 페이지마다 가입박스를 넣어 두었고, 
+FAQ의 지원쪽에도 링크를 달아 두었다. 
+
+구글의 개발자 제품을 통해 공지 그룹에 링크할 수 있는 일관적인 방법이 있다면
+그걸 사용하는 편이 좋겠지만, 최근 각 제품마다 독자적인 구조를 사용 <== 해석이 안되네요 
+(It would be better if there was a consistent way to link to
 notify groups across Google developer products, but since it is a
 concept that we introduced only recently, each product has come up
-with their own scheme.
+with their own scheme.)
 
-In an ideal world, when a developer signs up for your API (e.g. to
-get a key), they will be presented with the option to subscribe to
-the mailing list - that way you would get every developer on the
-list that cared.
-
+이상적으로는 API를 사용하기 위해 키를 얻는 순간 메일링 리스트를 가입할 수 
+있는 옵션을 제공해서 모든 개발자를 목록으로 관리하는게 좋다. 
 
 .. _twitter:
 
 Twitter
 *******
 
-Twitter is often described as "microblogging" - a mini blog post in
-140 characters - and it turns out that people love to try and
-squeeze their thoughts and status into this small amount of text. I
-think that part of the reason for the success of microblogging is
-the high bar of actual blogging these days - blogs are now an art
-form, and people expect blog posts to be polished and of a decent
-length. So, it's not easy to churn out many blog posts in a day -
-but hey, 140 characters, you can come up with that during your
-potty break.
+"마이크로블로깅"으로 알려진 트위터는 사람들이 자신의 생각과 상태를 표현하는데 
+적합한것으로 밝혀진 140자만을 이용하는 미니 블로그다. 마이크로블로깅의 
+성공에는 블로그의 높은 진입 장벽이 한몫 했다고 생각한다. 요즈음 블로그는
+뭔가 예의와 형식을 갖춰 적당한 그러니까 너무 짧지 않은 정도의 길이로 글을 
+써야 한다는 강박을 준다. 
 
-For a corporate entity like an API, a tweet can be a great way to
-communicate the smaller things that don't warrant a full blog post,
-but are still interesting to the developer world.
+사실 요즘 블로그를 쓴다는게 쉬운게 아닌데 겨우 140자 정도는 화장실 다녀 오는
+잠깐 동안도 쓸 수 있는 분량이다. 
+
+트위터는 API를 사용하는 개발자 사이에 흥미있는 소소한 얘기들을 주고 받기위한
+최고의 수단임에 틀림없다. 
 
 Link tweets
 ===========
 
-Many tweets in the world are really just links to somewhere on the
-web. Why? Well, Twitter asks what you're doing right now, and since
-most people using Twitter are on their computer, most people are in
-fact visiting a website. Once mobile clients become more and more
-popular, this may change, and we may actually get more non-geeky
-tweets (e.g. "I'm jumping out of a plane!"). But, people will
-always like sharing links - it's the basis of the web's
-viral-ness.
+상당수의 트윗이 외부 컨텐츠에 대한 링크다. 왜 그럴까? 트위터의 속성을 생각해보면
+답을 알 수 있다. 트위터는 지금 뭘하고 있는지? 어떤것에 관심이 있는지를 공유하는 곳인데
+트위터를 이용하는 그 시점에 대부분의 유저들은 웹 서핑을 하고 있기 때문이다. 
+물론 모바일 앱의 대중화 되면서 일상적인 트윗들이 늘어나는 추세이다. (e.g. "지금 비행기에서 뛰어내립니다!"). 
+그럼에도 불구하고 트윗을 통해 링크를 공유할 것이다. - 공유와 전파야 말로 웹의 근본 속성이니까
 
-From an API account, there are many websites to link to -
-documentation, articles, blog posts, sample code, third party
-websites, etc. Just always try to describe the link in a way that
-will get people interested on clicking on it, and even better, get
-people to re-tweet it (spreading the word around). This might mean
-using a few buzzwords, but, hey, it's Twitter - it's basically
-everyone competing to out-market one another. Join in the fun. Here
-are a few examples:
+API계정을 통해 문서나, 기사, 블로그 포스트, 샘플코드, 3rd 파티 웹 사이트 
+등 무수히 많은 링크들을 트윗하라. 그리고 트윗을 작성할때는 개발자이 흥미를 느끼고 
+클릭하여 웹사이트를 보거나 리트윗해서 널리 퍼질 수 있도록 작성하기 바란다. 
+이게 바로 입소문 마케팅인데, 트위터가 바로 즐거운 입소문 마케팅의 장이다. 
 
-  What happens if sea levels rise by 6, 10, 18 inches? See what
-  happens to your city on this flash map: http://globalfloodmap.org/
-
-  So cool - the power of Google Maps API & jQuery UI together- change
-  the look & feel of your map just by theme switching: http://tr.im/szGT
-
+예제들 : 
+  
+  해수면이 6, 10, 18인치 상승하면 어떻게 될까요? 지금 살고 있는 
+  지역을 플래쉬 맵에서 확인해 보세요: http://globalfloodmap.org/
+  
+  멋지죠 - JQuery를 적용한 구글 지도 API - 테마 변경을 통해 지도의 룩앤필을 바꿔 보세요 
+  : http://tr.im/szGT  
 
 Re-tweets
 =========
 
-As noted in the keeping tabs section, you should be constantly
-monitoring Twitter for tweets relevant to your API. When you see
-something interesting (usually a website using the API), re-tweet
-it from your API account. If there's space, try to add your own
-commentary to the re-tweet. Here's an example re-tweet that does
-that:
+API와 관련된 트윗을 모니터링 하고 있다가 흥미로운 트윗(API를 사용한 웹사이트 같은)
+을 발견하면 API계정을 이용해서 리트윗하면 좋다. 글자수 여유가 있다면 RT만 하지말고 
+간단히 코멘트도 적어주기 바란다. 다음 예를 참고하라 : 
 
-  RT @oschicago: On the Road with the Google Maps API: http://is.gd/1hJTo -
-  Great article on using GDirections!
+  RT @oschicago: 지도 API를 이용하여 경로 표시하기 : http://is.gd/1hJTo -
+  놀라운 GDirection을 활용사례!
 
 
 Questions
 =========
 
-Twitter users love giving their opinion, and generally just love
-having something to say. Thus, they love responding to questions
-posted by other users. So, a great way of engaging your twitter
-audience is to ask questions in your tweets. For an API, the
-obvious questions are asking who uses what parts of the API, or who
-uses the API for what reasons. You can ask the questions as
-standalone tweets, or append them to other relevant tweets. Here's
-an example link tweet with a question at the end:
+트위터 이용자들은 편하게 자기 의견을 얘기하고, 관심있는 무언가에 대해 소통
+하는 것을 즐기는 편이다. 당연히 다른 사용자들의 질문에 응답해 주는 것을 
+좋아 한다. 이점을 잘 활용해서 다른 사용자들과 좋은 관계를 맺어야 한다. 
+API를 예로 들면, 어떤 API를 누가 사용중인지, 뭘 만들려고 API를 사용하는지 
+등을 물어보며 좋은 관계를 맺도록 노력하기 바란다. 직접 트윗을 통해 물어 보거나,
+다른 사람의 트윗 중 연관된 트윗이 있다면 거기에 더해서 물어봐도 된다. 다음 예제를 참고하라:
 
-  Orbitz is now using the Street View API on its hotel
-  listings! http://tr.im/wBIl - Are any of you
-developers using it for hotel search?
+  Orbits는 호텔목록에 Street View API를 적용했습니다! http://tr.im/wBIl 
+  - 개발자중 호텔 검색할 때 사용해 보신분 있나요?
 
 
 Replies
 =======
 
-On Twitter, you can reply to users by starting the tweet with their
-username. As an API account, you want to avoid having conversations
-on Twitter that should be taking place in the forum or issue
-tracker instead. So, when possible, use replies to direct
-conversations to the proper venue or to give final answers.
+트위터에서는 username을 이용하여 답을 날릴 수 있지만, API 계정의 경우 
+토론이나 대화는 포럼이나 이슈 트래커 등을 이용해야 한다고 생각해서 
+대화 나누는 것을 피하려고 하는데, 가능하다면 대화는 적합한 곳에서 하자거나
+최종 답변을 줄때만 이용하라.(좀 해석이 모호합니다. 검수하는 분께 토스 ^^; )
 
-When you see a tweet about the API and it mentions a possible bug
-or complains about documentation, reply to the tweet and ask them
-to post it in the issue tracker. When you see a tweet about a
-current big outage in the API (as it will get tweeted about when it
-happens), point them to the notify list post about it. The basic
-idea here is to make sure Twitter users knows that you're always
-listening to their feedback.
+API의 잠재적 버그나 문서상의 문제점과 관련된 멘션을 받게 된다면 트윗을 통해 
+적당한 답을 해주고, 이슈 트래커에 올려줄 것을 요청하기 바란다. API와 관련된
+장애가 발생했을때 관련된 트윗을 발견하면 공지 사항을 통해 현황을 알려줘야 한다. 
+결국, 언제든 개발자의 피드백에 귀기울이고 있다는 확신을 주는 것이 중요하다. 
 
-Sometimes, Twitter users will direct a message to your account, or
-mention it in a tweet, often asking a question or recommending that
-you check out a site. Answer their question using the same
-technique as above, and if it's a nice site, consider re-tweeting
-it.
-
+종종 DM이나 멘션을 통해 질문을 하거나 특정 사이트를 봐달라는 요청을 받을때가 있는데 
+앞서 살펴본 것 처럼 응답해 주고, 만약 좋은 사이트나 질문이라면 리트윗 하기 바란다. 
 
 Authorship
 ==========
 
-As mentioned in the blog section, it's a good idea to inject some
-of your own personality into blog posts. That's true for tweets as
-well, but it's a bit tricky. On a blog post, you can include a
-byline that indicates who actually wrote the post. On a tweet, you
-only have 140 chars - there's no room for a byline, and no
-convention for putting one.
+블로그 섹션에서도 밝힌 것 처럼 트윗에서도 중간 중간 개인적 의견이나 개성을 
+표출하는 것이 좋다. 그렇지만 블로그와는 달리 트윗은 조금 어렵긴 하다. 
+블로그라면 글쓴이를 나타낼 수 있지만, 트윗은 140자 뿐이고 특별히 글쓴이를 
+나타낼 수 있는 규약도 없다. 
 
-One solution, adopted by a few corporate accounts like
-`whereivebeen <http://twitter.com/whereivebeen>`_, is to make the
-avatar combine the corporate logo with a photo of the usual author,
-and make the Twitter profile clearly describe the author. Another
-solution, used by accounts with multiple authors, is to come up
-with a convention for indicating the author of a tweet, and
-describe that convention on the Twitter profile. The fallback
-solution is to do nothing, and just use a generally cheery,
-informational attitude.
+해결책이라면 `whereivebeen <http://twitter.com/whereivebeen>`_, 처럼 
+기업용 ID의 운영자의 프로필 사진을 기업로고와 함께 나타내고, 프로필에 
+운영자에 대해 상세히 기술 하는 것 정도가 있다. 또 다른 해결책으로는 
+복수의 저자가 계정을 이용하며 트윗의 저자를 유추할 수 있는 규칙을 사용하는 것이다. 
+당연히 트위터 프로필에 해당 규칙에 대해서 자세히 설명해 줘야 한다. 
+그마저도 적합하지 않다면 예의 바르고 기분좋은 글들만 쓰며
+정보 전달자로서의 태도를 유지해야 한다. 
 
-Whatever you do, just be careful about what you tweet. It is very
-easy to users to re-tweet something that offends or irks them -
-much easier than responding to a blog post - so one slip-up can
-turn into a rising trend on Twitter. The general topics to avoid
-are competitors, death, sex, religion, race, politics. If for some
-reason your tweet does cover one of those topics (e.g. an API
-mashup plotting deaths from a recent disaster), send it to a
-colleague to a sanity check before posting. I once posted a tweet
-that connected the deaths of two famous celebrities with some
-recent API news, and that tweet landed our account on
-`TechCrunch <http://www.techcrunch.com/2009/06/25/the-web-collapses-under-the-weight-of-michael-jacksons-death/>`_-
-it may be just a tweet to you, but it can still blow up in your
-face.
+어떤 방식을 택하든 트윗을 할때는 늘 주의를 해야 한다. 알고 있겠지만 
+사용자들을 화나게 하거나 짜증나게 하는 것들에 대해 리트윗을 하는게 너무 쉽기  
+- 블로그 포스팅 하는 것보다 훨씬 쉽다 - 때문에 트위터에 트렌드로 떠오를 수도 있다.
+가급적이면 경쟁사, 죽음, 섹스, 종교, 인종, 정치 등에 대해 언급하지 않는게 좋다. 
+그럼에도 불구하고 어떤 이유로든 위의 언급된 토픽 중 하나라도 연관이 되는 트윗을 작성해야 한다면 
+(e.g. 최근 재해에 따른 사망자를 보여주는 API 매쉬업), 동료 들에게 한번쯤 검토를 
+받아 보는편이 좋다. 필자가 두 명의 유명인사가 사망했을 때, API 소식을 전하며
+사망 소식을 전한적이 있었다. `TechCrunch <http://www.techcrunch.com/2009/06/25/the-web-collapses-under-the-weight-of-michael-jacksons-death/>`_-
+무심코 한 트윗 때문에 오랫동안 고생할 수 있으니 주의하기 바란다. 
 
 
 Technology
 ==========
 
-If you've put yourself in charge of twittering for your API, the
-chances are that you are already a Twitter user - meaning that you
-now have a personal Twitter account and a corporate Twitter account
-to maintain. This can be tricky to do, considering that each
-require their own login, and considering that Twitter is kind of an
-always-on experience.
+트위터는 일반적으로 항상 on 상태에서 사용하게 되는데, API 관리용 트위터 계정과 
+개인 계정을 함께 운용중이라면 여러 모로 사용이 불편하다. 
 
-The first option is to simply have two different browsers, one
-logged into each account. That's not ideal if you're a power
-Twitter user though, because the Twitter website itself is pretty
-basic and doesn't wrap up all the functionality that you should be
-using.
+서로 다른 브라우저 2개를 띄워 각각의 계정으로 사용할 수 있겠지만, 
+파워 트위터리안이라면 추천할 만한 방법은 아니다. 트위터 웹 사이트는 
+기본 기능에만 충실하게 구현된 상태이므로 불편한 면이 없지 않다. 
 
-The better option is to use a Twitter app or client that includes
-functionality like saved searches and also allows for logins from
-multiple accounts. For example, `TweetDeck`_ is an AIR app that works across
-Windows and Mac and supports both those features. It is a bit scary
-that both logins are saved into the same app - it means you need to
-be a bit more careful to make sure you don't tweet a personal
-status from your corporate account.
+좀더 나은 방법으로는 복수 계정을 지원하고 검색어 저장등을 지원하는 고급 
+클라이언트를 사용하는 것이다. `TweetDeck`_ 은 AIR 기반의 앱이어서 윈도우와 
+맥 모두에서 실행되고 복수 계정과 검색어 저장 등을 지원한다. 
+모든 것에 일장 일단이 있듯이 복수 계정을 지원하는게 꼭 좋은 것 만은 아니다. 
+가령 기업 계정으로 개인 계정에 쓸만한 트윗을 쓰는건 아닌지 늘 조심해야 한다. 
 
-A more secure option is to use two different Twitter apps,
-one for your personal account, and one for your corporate account.
-There are other TweetDeck-like apps like `Seesmic`_, there are browser
-extensions like `Chromed Bird`_, and there are webapps that specifically
-cater to the corporate tweeters, like `HootSuite`_.
-For a small fee, HootSuite
-lets you share an account with another user, so if you share
-tweeting responsibilities with a colleague, you can both see
-the same view of saved searches, pending tweets, and statistics.
+좀더 안전한 방법으로는 서로다른 트위터 클라이언트를 사용하는 것이다. 
+하나는 개인 계정으로, 또다른 하나는 기업 계정으로 사용하는 것을 추천한다. 
+트윗덱과 같은 `Seesmic`_이나, 브라우저의 익스텐션인 `Chromed Bird`_ 등을 고민해 보기 바란다. 
+아니면 기업 트위터를 위해 만들어진 `HootSuite`_ 같은 웹 앱도 있다. 
+
+HootSuite는 동료와 공동으로 기업 계정을 사용할 수 있도록 지원해준다. 비용도 저렴한 편이다. 
+따라서 동료와 함께 같이 트윗팅을 할 수 있고 임시저장, 통계, 검색어 저장 등의 화면도 공유가 가능하다. 
 
 .. _TweetDeck: http://www.tweetdeck.com/
 .. _Seesmic: http://seesmic.com/
@@ -459,81 +365,63 @@ the same view of saved searches, pending tweets, and statistics.
 
 .. _discussion-forum:
 
-Discussion Forum
+discussion-forum
 *****************
 
-The discussion forum should primarily exist for discussion of API
-development, and that generally means that most posts will be from
-developers. But, since the forum has an active audience, and since
-developers like to discuss anything API-related, you can use it as
-a place to re-post items from the blog, notify list, or Twitter.
-The key is to use your discretion so that you don't dominate the
-posts.
+포럼은 API개발과 관련된 주제에 대해 서로의 의견을 제시하고 조율하는 것을 
+목표로 하기때문에 개발자에 의해 주도되는 것이 일반적이다. 그렇지만
+포럼이 활성화되어 사용자 층이 늘어나게 되면 API개발과 관련된 것이라면 
+무엇이든 논의되고 블로그 포스트나, 공지사항, 트윗등도 자유롭게 게시된다. 
 
-For the Maps API, I have a policy of always re-posting in the forum
-any message that is posted to the notify list. This does mean that
-the good developers get messages twice, but I like giving the
-developers a place to discuss the releases, bugs, or upcoming
-changes. If you don't give them an obvious way to discuss those
-posts, then they will 1) assume that you don't care about their
-voices, and 2) email you personally with their thoughts. Both of
-these outcomes are undesirable.
+결국 글을 쓸때 포럼의 성격을 크게 벗어 나지 않도록 조절하는 것이 중요하다. 
 
-As for re-posting blog posts or links that I tweeted, I will do it
-every so often. Those posts make for a nice, happy change from the
-typical "my app doesn't work posts", and make the forums into a
-happier place that hopefully developers will want to be in. This is
-a particularly good idea for forums that still have small
-communities, as it motivates developers to pay attention to the
-forum posts so that they'll see the inspirational or informational
-posts, and every so often, they may decide to respond to a forum
-post as well. As examples,
-`this post <http://groups.google.com/group/google-maps-api-for-flash/browse_frm/thread/00bb53743fc9fe4c#>`_
-links to a blog post made on our blog,
-`this post <http://groups.google.com/group/google-maps-js-api-v3/browse_frm/thread/92e070b430bb9c3d?hl=en#>`_
-announces a new demo and encourages developers to add their demos,
-and
-`this post <http://groups.google.com/group/google-maps-api-for-flash/browse_frm/thread/1fa8460d90ae9ce7#>`_
-links to two cool uses of the API from non-Google developers.
+필자의 경우 지도 API에 대한 공지사항은 반드시 포럼에 재 게시한다는 원칙을 가지고 있다.
+이렇게 함으로써 일부 좋은 개발자이 중복으로 메시지를 받게 되기는 하지만, 
+결국 새로운 배포, 버그, 변경 사항등을 토론할 기회를 얻게 된다고 생각한다. 
+이와 같이 명백한 방법으로 정보를 제공하지 않게 되면 1)자신들의 의견에 귀 기울이지 않는다거나
+2) 이메일을 통해서만 의견을 주고 받는 다고 생각하게 될것인데, 궁극적으로는 
+그 둘 모두 바람직하지 않은 결과를 야기할 것이다. 
 
+포럼에 블로그 포스트를 재 게시하거나, 트윗링크를 거는것에 대해 필자는 대환영이다.  
+"내가 만든 앱이 작동안해요"같은 포스트를 통해 포럼이 좀더 풍성해지고 
+개발자가 원하는 것을 얻을 수 있는 공간이 될것이라 생각한다. 
+또한 소규모 커뮤니티를 통해 영감이나 정보를 주는 포스트가 올라오고 이를 통해 개발자
+스스로가 동기 부여하게 되어 좋은 결과물들을 만들어 낼 수 있다. 
+예로, 블로그에 링크된 `이 포스트 <http://groups.google.com/group/google-maps-api-for-flash/browse_frm/thread/00bb53743fc9fe4c#>`_
+를 통해,
+`이 포스트 <http://groups.google.com/group/google-maps-js-api-v3/browse_frm/thread/92e070b430bb9c3d?hl=en#>`_
+에 발표된 것처럼 새로운 데모가 나오고 개발자이 자신의 데모에 추가하게 되었다. 결과적으로 
+`이 포스트 <http://groups.google.com/group/google-maps-api-for-flash/browse_frm/thread/1fa8460d90ae9ce7#>`_
+에 나오는 것처럼 구글 외의 개발자로 부터 멋진 두개의 API사용 예제가 나오게 되었다. 
 
 
 .. _newsletter:
 
-Newsletter
+newsletter
 **********
 
-The newsletter is a very "retro" style of communication, but it is
-still a good one. It appeals to the people that may not care enough
-to read through blog and forum posts, but still want to know
-generally what's going on with a product, and they want the
-information delivered straight to your inbox. Basically, you make
-it as easy as possible for them to keep up to date with your latest
-news, and you benefit because they likely would not have paid
-attention to any other communication form.
+뉴스레터가 매우 고전적 스타일의 커뮤니케이션이긴 하지만 제품 개발과 
+관련된 정보를 메일함으로 직접 배달해 주기 때문에 블로그나 포럼까지 챙겨보기 
+힘든 사용자들에게 여전히 유용한 편이다. 또, 다른 매체를 통하지 않고도 뉴스레터만 
+챙겨 보면 최신 소식을 쉽게 알 수 있는 장점도 있다. 
 
-A typical style for a newsletter is a once-monthly summary of all
-the recent news in an easy-to-read format. One example of that is
-the
-`AWS Developer Newsletter <http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=42>`_,
-put out by Amazon each month. The newsletter consists of recent
-news (a paragraph for each item), new developer resources
-(articles, code), highlighted AWS uses, and a summary of upcoming
-events.
+뉴스레터는 가급적 읽기 쉬운 형태로 한달에 한번 정도 발행하는게 일반적이다. 
+Amazon이 한달에 한번 발행하는 `AWS 개발자 뉴스레터 <http://developer.amazonwebservices.com/connect/kbcategory.jspa?categoryID=42>`_,
+가 좋은 예이다.  
 
-Some services put out newsletters only when there are a significant
-number of new features to announce, and they want to bring those to
-the developer's attention. Those newsletters would typically happen
-less frequently.
+AWS 개발자 뉴스레터는 주요뉴스가 단락별로 정리되어 있고, 개발자이 사용할 수 있는 기사나 코드, 
+주요 AWS 케이스 스터디, 새로운 이벤트 정보들로 구성되어 있어 유용하다. 
 
-Instead of a newsletter or in addition to it, an API provider can
-also send out targeted emails when it has a big announcement that
-it wants to make sure all of its developers are aware of. Once
-again, Amazon is an example of this kind of communication. Once
-every few months, Amazon sends emails informing developers about
-its new offerings. These emails may well be replicas of blog posts
-elsewhere, but they are probably more likely to be read than blog
-posts. People often subscribe to blogs and then forget to read
-them, but they don't often completely ignore emails in their inbox.
-If you can get developers to agree to receive news via email, you
-will likely have a captive audience on your hands.
+일부 서비스의 경우 주목할만한 새로운 기능을 발표해 개발자의 주목을 끌 필요가 있다고 
+판단 될때만 뉴스레터를 발행하기도 하지만, 흔한 경우는 아니다. 
+
+또한, API 제공자는 개발자 모두가 알기를 원하는 주요 공지사항의 경우 
+뉴스레터를 추가 발행하거나 별도의 타켓 그룹에 이메일을 보내기도 한다. 
+
+다시 한번 Amazon의 예를 주목해 보자. 몇달에 한번 Amazon은 메일링을 통해 
+새롭게 제공되는 기능에 대한 정보를 제공하였다. 물론 몇몇 메일의 경우 블로그 포스트의
+복제본 이었지만 어쨌든 개발자이 읽을 가능성은 높아 졌다. 
+
+일반적으로 블로를 구독하더라도 실제 포스트를 읽는걸 종종 잊곤 하지만, 
+이메일의 경우 자신의 메일함에 온 메일을 온전히 무시하는 경우는 상대적으로 적은 편이다. 
+따라서, 뉴스레터 수신동의를 통해 상대적으로 충성도 높은 독자를 얻게 되는 것이다. 
