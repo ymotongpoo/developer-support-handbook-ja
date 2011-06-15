@@ -1,172 +1,204 @@
-문서화
+Documentation
 #############
 
-아마 세계 최고의 API를 제공하고 있지만, 문서화되어 있지 않은 API는 어쩌면
-회사에서 돈을 받으니 억지로 쓰거나, 고통을 즐기는 사람들이나 사용할 것이다.
-문서화의 목적은 개발자에게 관심을 가지도록 하는 것이다. 그 중에는  취미개발자, 
-초보자, 프리랜서, 현업 개발자, 학생 등이 모두 포함되며, 이들 모두에게 API를
-잘 설명하는 것이 중요하다.
+You can provide the best API in the world, but if you don't
+document it, the only developers that will use it are the ones that
+are paid to do it, or that enjoy pain. Most likely, your goal is to
+attract every type of developer - the hobbyists, the newbies, the
+freelancers, the paid employees, the student, etc. - and the goal
+of your documentation is to explain the API in a way that works for
+all of those types of developers, and all types of learners.
 
-어떤 개발자들은 API 레퍼런스가 더 친숙할 수 있고, 다른 사람은 예제 코드, 또는
-발표자료나 간단한 개념 가이드에 더 익숙할 수 있다. 따라서, 가급적 다양한 형식의 
-문서들을 제공하면서 최신성과 일관성을 유지할 필요가 있다.
+Some developers learn best from an API reference, some from sample
+code, some from a presentation, some from a conceptual guide. So,
+you need to provide your documentation in all those different
+forms, keeping them as up-to-date and in-sync with eachother as
+possible.
 
-문서화 결과물은 다음과 같은 것들을 포함하도록 노력해야 한다.
+A complete documentation set should try to include the following:
 
-* :ref:`class-reference`: API 기능의 포괄적인 목록
-* :ref:`changelog`: 각 API 버전별 변경사항
-* :ref:`code-samples`: 전형적인 API 사용 예제 집합
-* :ref:`code-playground`: API를 사용해보기 위한 대화식
-* :ref:`developers-guide`: 좌담식으로 쓰여진 API 사용 지침
-* :ref:`articles`: API를 사용하는 다른 방법을 논의하는 튜토리얼 또는 스크린캐스트
+* :ref:`class-reference`: A comprehensive listing of API functionality.
+* :ref:`changelog`: A reference of what changes in each API version.
+* :ref:`code-samples`: A set of examples showing typical API usage.
+* :ref:`code-playground`: An interactive explorer for trying the API
+  live in the browser.
+* :ref:`developers-guide`: A conversational written guide to using the API.
+* :ref:`articles`: Tutorials and screencasts discussing different ways
+  of using the API.
 
 .. _class-reference:
 
-클래스 레퍼런스
+Class Reference
 ***************
 
-여러분의 API가 오픈소스가 아니라면,  클래스 레퍼런스는 개발자들이 
-무슨 클래스와 메소드를 사용할 수 있는지 보여주는 가장 중요한 문서이다.
-API가 오픈소스(즉, 소스 코드를 읽을 수 있는 경우)라면, 이 문서를 통해
-코드를 검색(grep)하고, 메소드를 찾는 일을 도와 줄 수 있다.
-특히, 레퍼런스는 API의 특징을 조사해볼 수 있는 좋은 수단이다. 
-즉, 개발자들이 최상위 레벨의 클래스만 훑어봄으로써 원하는 것이 있는지 
-없는지 바로 파악할 수 있다.
+If your API is not open-source, then the class reference is the
+absolute go-to source for showing developers what classes and
+methods they can use. If your API is open-source (i.e. its a
+non-obfuscated library of code), then this reference is a nice
+alternative to grepping through code and looking for methods. A
+reference can also be a great way to do a quick feature-check of an
+API - just by a quick skim of the top-level classes in an API, a
+developer can figure out if the API does what it wants it to do (or
+not).
 
-클래스 레퍼런스의 기본적인 목적은 기능의 모든 것을 제공하도록 하는 것과
-이를 쉽게 찾고, 연결하고 사용하도록 하는 것이다.
+Your basic goals for a reference is to make sure it covers everything,
+and is easy to search, link, and use.
 
 
-내용
+Content
 ===================
 
-본 문서는 API의 모든 부분을 아우르며, 버전별 제공 기능 및 제외 기능(deprecation)
-정보를 포함해야 한다.
+The reference should be thorough, covering every part of the API,
+including versioning and deprecation information.
 
-
-전반적인 정보
--------------
-
-본 문서는 이벤트, 프로퍼티, 옵션, 메소드, 클래스, 상수 등 API의 모든 부분을 
-제공해야 한다. 또한, 각 영역의 세부 정보들도 설명해야 한다. 예를 들어, 메소드는 
-인자(argument), 반환형식(return type), 설명이 있어야 하고, 프로퍼티는 형식(type)과 
-기본값이 있어야 한다.
-
-메소드가 다른 결과를 제공한다면 이를 설명해야 한다. 메소드를 호출하거나 클래스를 
-사용하기 위한 전제조건 역시 제공해야 한다.  예를 들어, Maps API를 사용하는 개발자가 
-``Map()`` 을 생성한 후와 다른 작업(action)들을 수행하기 전에 에 항상 ``setCenter()`` 를 
-호출해야 하다면, ``Map()`` 생성자와 ``setCenter()`` 메소드 양쪽 모두에 이를 명시해야
-한다. (참고: 가급적 전제조건을 수반하지 않도록 API를 설계하는 것이 더 낫다.)
-
-버전
-----------------
-
-공개한 API가 버전 개념이 있고, 외부 개발자들이 언제든지 다른 버전에 접근한다면
-각 레퍼런스 안에 버전 사이의 차이점을 표기해야 한다. 각 API 객체 역시 설명 안에서 
-버전 안내를 제공해야 한다.
-
-개발자들이 레퍼런스를 버전 기준으로 정렬하거나 필터링할 수 있다면 좋을 것이다.
-버전x.x에서 소개된 모든 것을 보거나 최근에 추가된 객체들을 볼 수 있도록 하면 좋다..
-
-레퍼런스 자체에 버전을 표시하는 것에 대한 다른 대안은 각 버전별 차이점을 제공하는 
-것이다. 각 버전에 대한 새로운 레퍼런스을 제공하는 것은 URL들이 변경될 뿐만 아니라
-전반적인 내용 변경을 하지 않는다면, 이전 버전과 비교하여 중복된 내용이 많이 존재하는
-단점이 있다.
-
-우리가 원하는 바는 기본적으로 어떤 방법으로든 문서에 버전 정보를 전달하는 것이다.
-
-중단 예정(deprecation)
-----------------------
-
-앞으로 중단될(deprecate) API 객체라면, 명확히 이를 알려야 한다.
-설명안에 "중단 예정" 또는 "version N 이후 중단 예정" 라는 내용을 고지하고,
-그 부분을 흐리게 처리하는 것 같은 시각적인 구분을 해야 한다.
-
-형식
-===================
-
-레퍼런스가 모든 걸 포함한 후에는 검색 및 참조하기 쉽게 최적화 해야 한다.
-
-
-페이지 수
----------------
-
-레퍼런스의 형식을 언제 어떻게 보여줄지, 한 페이지 또는 여러 페이지로 
-보여줄지 결정하는 일은 매우 중요하다.
-
-한 페이지로 된 레퍼런스의 장점은 개발자가 CTRL+F로 빨리 참조할 수 있다.
-단점은 그 레퍼런스가 API 성장에 따라 상당히 커질 수 있다. 그리고 그것은 
-안전하게 그림이나 인터렉티브한 항목을 뿌리고, 적당한 시간에 불러오는 것을 
-기대할 수 없다.
-
-가능하다면, 양쪽다 선택할 수 있게 제공해야 한다. Flash Maps API의 경우,
-온라인에서 단일 페이지 포멧으로 제공하고, SDK zip 안에 다중 페이지의 
-전통적인 ASDoc 포멧을 넣어서 제공해서, 사람들이 더 좋아하는 것을 선
-택하도록 한다. 단일 페이지 버전은 다중 페이지 문서로부터 생성된다. 
-
-우리는 그것을 자동적으로 계속 동기화 할 수 있다.
-
-연결성
---------
-
-레퍼런스내에 모든 API 객체는 유일한 URL 주소로 접근되어야 한다. 예를 들어,
-단일 페이지 레퍼런스에서는 ``#map.MapOptions.draggable``,
-  다중 페이지 레퍼런스에서는 ``map/MapOptions.html#draggable`` 와 같이 되야 한다.
- 이 기본적인 목적은 포럼에서 의사소통 할 때, 블로그, 기사, 문서의 나머지 부분에서
-직접 참조하기 위함이다.
-
-추가적으로 연결성을 제공하려면, 그 레퍼런스가 개발자들에게 그 URL을 찾기 쉬운 방법을 
-제공할 필요가 있다. (HTML을 통해서 anchor 태그를 찾아야만 하지 않게 하기 위해서)
-예를 들어, JS Maps API 안에 API 객체 이름에 하이퍼링크를 거는 것으로 가능하다.
-또 다른 방법으로 각 API 객체 섹션에 다음으로 갈 수 있는 작은 링크를 제공하는 것이다.
-
-
-검색 가능성
+Full Coverage
 -----------
 
-개발자는 레퍼런스를 통해서 검색하고, 원하는 것을 빨리 찾을 수 있어야 한다.
-레퍼런스가 단일 페이지로 되어 있으면, CTRL+F(브라우저 검색)으로 할 수 있을 것이다.
-만약 그렇지 않다면, 레퍼런스에 특화된 검색창을 제공해야 한다. 그것은 레퍼런스 
-페이지들 범위로 한정된 Google Custom Search Engine으로 구현할 수 있다.
+The reference should show every aspect of an API - events,
+properties, options, methods, classes, and constants. It should
+also include every aspect of each of those. For example, a method
+should have arguments, a return type, and a description. A property
+should have the type and the default value, if there is one.
 
-(역자주) `Daum 검색의 Site 옵션 <http://search.daum.net/search?w=dir&q=site:dna.daum.net+api>`_ 을 이용할 수도 있다.
+If any side effects result from a method, they should be described.
+If any prerequisites are required before calling a method or using
+a class, they should be described. For instance, developers using
+the Maps API should always call ``setCenter()`` after creating a ``Map()``
+and before performing other actions, and we put notice of that in
+both the ``Map()`` constructor and the ``setCenter()`` method.
+(Sidenote: A better designed API would involve no prerequisites
+like that.)
 
-다운로드
+Versions
+----------------
+
+If your API has any notion of versions, and developers are able to
+access different versions of the API at any given time, then the
+reference should note the version differences in the reference.
+Each API object should have the version it was introduced in its
+description.
+
+Ideally, a developer could also sort or filter a reference by
+version. They might want to see every thing that was introduced in
+version X, or see the most recently added objects.
+Another alternative to denoting versions in the reference itself is
+to provide different references for each versions. The downside to
+providing a new reference for each version is that the URLs likely
+change, and there may be a lot of redundant content if the API
+doesn't change much across versions.
+
+The basic idea is to convey version information in your docs in
+some way or the other.
+
+Deprecation
+----------------------
+
+If your API ever deprecates API objects, that should be very
+clearly shown. In addition to including a "deprecated" or
+"deprecated since version N" in the description, some visual
+distinction should be employed, like greying out the section.
+
+Format
+===================
+
+After you've made sure your reference covers everything,
+you should optimize the format to make it easy to find
+and reference everything.
+
+Number of Pages
+---------------
+
+There is one big decision to make when figuring out the format of
+your reference, and that affects all of the requirements: one page
+or multiple pages.
+
+The benefit of providing a one-page reference is that a developer can
+easily do a quick CTRL+F to jump around the reference.
+The downside is that the reference can grow pretty large as your
+API grows, which means you can't safely sprinkle it with
+images or interactive items and expect it to load in a reasonable
+amount of time time.
+
+If possible, you could offer both options. For the Flash Maps API,
+we host a single-page version online, and we distribute a
+multi-page traditional ASDoc format along in the SDK zip, so people
+can choose what they prefer. The single-page version is generated
+from the multi-page doc, so we can keep them in sync automatically.
+
+Linkable
 --------
 
-오프라인일 때 오픈 API를 사용해서 개발하는 것이 어려움에도 불구하고, 휴가나 심심할 때 
-레퍼런스를 보는 것을 좋아하는 개발자들이 있다. 그런 개발자들을 위해, 우리는 PDF 버전, 
-또는 HTML5 offline storage를 사용하던지 해서 오프라인에서도 이용할 수 있는 레퍼런스를 
-제공할 수 있다. 항상 다운로드 버전은 live 버전과 동기화해야 한다.  그리고 그게 불가능 하
-다면, 오직 live 버전만 제공해라.
+Every API object in your reference should be addressable by a
+unique URL - e.g. ``#map.MapOptions.draggable`` for a single page
+reference or ``map/MapOptions.html#draggable`` for a multi-page
+reference. The primary purpose of this is so that each API object
+can be referred to directly when communicating in forums, blog posts,
+articles, and the rest of the documentation.
+
+In addition to being linkable, the reference needs to provide an
+easy way for developers to find that URL (so that they don't have to
+hunt through the HTML looking for anchor tags). We accomplish that in the
+JS Maps API by hyperlinking the API object name. Another option
+would be to put a little link icon next to each API object section.
+
+Searchable
+----------
+
+A developer should be able to search through a reference and find
+what they want quickly. If your reference is single-page, that's
+accomplished with CTRL+F (browser find). If not, then you should
+provide a reference-specific search box. That could be implemented
+using a Google Custom Search Engine scoped to the reference pages.
+
+Downloadable
+-------------------
+
+Surprisingly, even though its hard to develop with Web APIs while
+offline, there are developers out there that like to browse through
+references while they're flying on a plane, tanning on a beach in
+Maui, etc. For those developers, you can provide a PDF version of
+your reference, or perhaps use HTML5 offline storage to make your
+reference available offline. Just always make sure that the
+downloadable version stays in-sync with the live version - and if
+that isn't possible, then I suggest only offering the live version.
 
 
-생성
+Generation
 ==========
 
-좋은 레퍼런스에는 많은 요구 사항이 있다. API 변경 후 레퍼런스를 업데이트할 때마다 작업이 
-있는 것은 원치 않을 것이다. 가급적 업데이트된 코드를 자동으로  생성해야 하고, 레퍼런스
-생성기는 그 요구사항들에 충실해야 한다.
+As you can see, there are a lot of requirements to a good
+reference. And really, you don't want to have to worry about all of
+them each time that you update the reference after an API change.
+Ideally, you should generate the reference programmatically from
+the updated code, and the reference generator should adhere to the
+requirements.
 
-JavaDoc은 Java를 다중 페이지 레퍼런스로 바꾸는 동안 이러한 것들을 쉽게 해주는 도구이며,
-이처럼 다른 언어들에 대해서도 많은 도구들이 있다.
+JavaDoc was the first tool to make this easy, for turning Java into
+multi-page references, and many tools have followed suit for the
+other languages.
 
 JSdoc-toolkit
 -------------
 
-`JsDoc Toolkit`_ 은 JavaScript 소스코드 위에서 실행되고 단일 페이지 또는 다중 페이지 HTML을 
-생성한다.  그것은 사용자 정의 템플릿을 통해서 JSON과 XML같은 다른 텍스트 포멧을 제공할 수도 있다.
+The `JsDoc Toolkit`_ runs over JavaScript source code and generates single-page
+or multi-page HTML from it. It can also generate other text formats,
+like JSON and XML, via custom templates.
 
-우리가 `Maps API v3 reference`_ 문서를 자동으로 만들어야 함을 느꼈다. 왜냐하먄, v2에 대한 레퍼런스를 
-수동으로 업데이트하는 고통을 경험했기 때문인데, 그래서 이 도구를 이용하기로 했고 만족하는 결과물을
-얻기 위해 노력했다.
+When we decided we wanted to auto-generate the `Maps API v3 reference`_
+(after experiencing the pain of manually updating the reference for v2),
+we decided to use the toolkit, and I endeavored to customize the output
+for our needs.
 
-이 도구는 개념적으로 훌륭하지만, 어느정도 가지고 놀거나 JavaScript 코드 형식을 어떻게 맞춰야 
-하는 점이 힘들었다. (Google 코딩 관습은 그 표준과 좀 다름). 게다가 결과를 맞춤으로 하는 것도 어려웠다.
+The toolkit is great in concept, but it takes a fair amount of fiddling
+with, depending on how you format your JavaScript code (the Google coding
+conventions differ somewhat the standard), and on how much you want
+to customize the output.
 
-이 도구는 JS로 작성되었지만, 그 코드 자체는 주석이 조금 밖에 없어서 디버그하기 힘들었다는 것은
-아이러니 하다. 만약 `JsDoc Toolkit`_ 을 사용하기로 결정했고, 우리 단일 페이지 API 레퍼런스와 
-비슷한 결과물을 찾고 있다면, Maps API 라이브러리에서 `the template`_ 을 다운로드 받을 수 있다.
+Ironically enough, the toolkit is written in JS, but its own code contains
+very little comments, so it can be frustrating to debug. If you do
+decide to use `JsDoc Toolkit`_ and you are looking for an output similar to
+our one-page API references, you can download `the template`_
+from our open source Maps API library.
 
 |mapsv3reference|
 
@@ -178,9 +210,13 @@ JSdoc-toolkit
 PyDoc
 -----
 
-`pydoc`_ Python 모듈은 Python 코드를 실행하고 JavaDoc과 비슷한 다중 페이지 형식의 산출물을
-만들어 낸다. 그런데 검색하기 더 어렵다. 게다가 기본 산출물은 별로 이쁘지 않다.
-Google은 현재 이것을 Google data `Python client library`_ 레퍼런스에서 사용한다.
+The `pydoc`_ Python module runs over Python code and produces a multi-page
+format similar to JavaDoc. The result is highly linkable, but as it is
+multi-page, it's harder to search. In addition, the default output is not
+too aesthetically pleasing.
+
+Google currently uses this for the Google data `Python client library`_
+reference.
 
 |gdatareference|
 
@@ -192,19 +228,28 @@ Google은 현재 이것을 Google data `Python client library`_ 레퍼런스에�
 Sphinx
 ------
 
-`Sphinx`_ 도구는 `reStructuredText`_-스타일 포멧을 사용하는 소스코드(또는 어떤 텍스트던지)를 
-문서화하기 쉽게 해준다.  원래 새로운 Python 문서를 위한 문서를 산출하기 위해 만들어 졌기 때문에, 
-Python 개발자들은 이것의 기본 산출물을 즉시 인지할 것이지만, 다른 언어에서도 사용되기도 한다. 
-그리고 지금 이 handbook 처럼 code를 쓰지 않는 문서에도 사용된다.
+The `Sphinx`_ tool makes it easy to create documentation for source
+code (or in fact, any text) that uses `reStructuredText`_-style formatting.
+It was originally created to generate the documentation for the
+new Python documentation, so Python developers will recognize its
+defalt output immediately, but it is also being used to output
+documentation for other languages, and non-code documentation, like
+this handbook itself.
 
-`Sphinx`_ 레퍼런스 정보를 본문형태 설명과 같은 다른 내용과 섞을 수 있어서, 전반적인 개발자 지침을 
-작성하기에 좋은 방법이 될 수 있다.  단일 페이지 또는 다중 페이지, 기본 산출물도 깔끔하고 좋아보인다.
-단지 소스파일에 다른 명령을 실행하는 것으로 LaTex 나 PDF 같은 다른 포맷으로도 산출물을 뽑아낼 수 있다.
+`Sphinx`_ allows you to mix reference information
+with other content, like textual explanations, so it can be a nice
+way to write an entire developers guide. You can use it to create
+one-page or multi-page references (with the tendency towards the
+first), and the default output looks nice and clean. Additionally,
+you can easily output other formats, like LaTex or PDF, by just
+running a different command on your source files.
 
-만약 여러분의 코드에 대해 reStructuredText를 아직 사용하고 있지 않다면, 그 포맷을 배우는 것과 
-주석을 변경하는데 시간이 좀 걸릴 것이지만, Python API를 이용을 경험해 보는 것도  가치있는 시간이다.
+If you are not already using reStructuredText for your code,
+it can take some time to learn the format and port the comments over,
+but particularly for Python APIs, it's worth the time.
 
-pydoc을 시작한 후, 우리는 `Wave Robots API Python library`_ 레퍼런스에서 Sphinx를 사용하는 것으로 바꿨다.
+After starting with pydoc, we switched over to using Sphinx for the
+`Wave Robots API Python library`_ reference.
 
 |wavereference|
 
@@ -216,118 +261,144 @@ pydoc을 시작한 후, 우리는 `Wave Robots API Python library`_ 레퍼런스
 ASDoc
 -----
 
-Adobe는 개발자들이 그들의 사이트에서 제공하는 것들과 같은 다중 페이지 레퍼런스를 만들기 
-쉽게 `ASDoc`_ 을 제공한다.  ActionScript 개발자들은 이미 core AS3 라이브러리를 사용했을 때부터 
-이미 이 포맷을 사용하고 있다. AS3 라이브러리를 제공하고 있다면, 익숙하고 좋은 포맷이다.
+Adobe provides `ASDoc`_ to make it easier for developers
+to create multi-page references like the ones that they host on
+their site. Since ActionScript developers already use this format
+when they're using core AS3 libraries, it's a good, familiar format
+to choose if you're providing your own AS3 library.
 
-우리는 ASDoc을 Flash Maps API에 대해서 다운로드 가능한 다중 페이지 레퍼런스를 만드는데, 
-보다 우리의 다른 API들처럼 보이도록 script를 온라인 상의 단일 페이지 레퍼런스 변경하데 
-사용하곤 했다.  우리는 Flash 개발자들과 Maps API 개발자들 양쪽 개발자들이 오길 기대했기 
-때문에 그들이 사용하던 것들 간의 일관성을 갖도록 노력하고 있었다.
+We used ASDoc to create a downloadable multi-page reference for the
+Flash Maps API, and we used a script to convert that into an online
+one-page reference othat looked more like our other APIs.
+We were trying to be both consistent with what Flash developers
+were used to, and with what Maps API developers were used to, since
+we expected developers to be coming from both fronts.
 
 |flashreference|
 
 .. |flashreference| image:: ./screenshot_flashreference.png
 .. _ASDoc: http://livedocs.adobe.com/flex/3/html/help.html?content=asdoc_1.html
 
+
 .. _changelog:
 
-변경기록
+Changelog
 *********
 
-API를 문서화 할 때, API가 언제 어떻게 변경되었는지도 문서화해야 한다.
-변경기록은 변경된 행위, 신규 API, 중단 예정인 API 들을 레퍼런스나 블로그 
-글의 적절한 링크와 함께 나열해야 한다. 어떤 개발자가 직면할 수 있는 버그가 
-고쳐졌는지와 함께 이슈 트래커에서 추적되었다면 그 이슈의 링크도 제공해야한다.
+When documenting your API, you must also document when and how your API
+changes. A changelog should list changes in behavior, new API objects,
+and deprecated API objects, with links to relevant sections of the reference
+or blog posts. It should also list any developer-facing bugs that were fixed,
+and link to an issue tracker, if the bug was tracked there.
 
-우리는 Maps API에 대해서 이슈 트래커 프로젝트 내에 있는 `위키페이지 <http://code.google.com/p/gmaps-api-issues/w/list>`_ 에 
-변경기록을 게시한다. 변경된 이슈에 링크를 쉽게 걸 수 있고, RSS feed를 제공
-할 수 있다. 원한다면 변경사항 wiki들에 어떤 변경이 있는지 구독할 수 있다.
-(참고: 공지사항 목록에도 변경사항에 대해 게시해야 한다).
+For the Maps APIs, we post the changelogs as `wiki pages`_ in
+the issue tracker project. That makes it easy to link to the
+changed issues, and also comes with an RSS feed, so developers can
+subscribe to any changes in the changelog wikis if desired.
+(Note: You should be also posting about changes to an announcements list).
 
-`Google Analytics Data Export API`_ 와 `Google Sites API`_ 같은
-다른 Google API들은 그 문서 안에 페이지들처럼 변경사항을 게시한다. 
+Other Google APIs post their changelogs as pages in the documentation,
+such as the `Google Analytics Data Export API`_ and `Google Sites API`_.
 
 |analyticschangelog|
 
 .. |analyticschangelog| image:: ./screenshot_analyticschangelog.png
+.. _wiki pages: http://code.google.com/p/gmaps-api-issues/w/list
 .. _Google Analytics Data Export API: http://code.google.com/apis/analytics/docs/gdata/changelog.html
 .. _Google Sites API: http://code.google.com/apis/sites/changelog.html
 
 
 .. _code-samples:
 
-코드 샘플
-*********
+Code Samples
+*************
 
-API 아래에 개념을 설명하고 레퍼런스에 있는 모든 객체들을 나열하는 것은 중요하지만, 
-실제로 그 API를 사용할 때 샘플 코드 제공은 매우 중요하다. 만약 개발자가 샘플코드를 
-통해 하는 결과를 만드는 코드를 만들 수 있다면  즉시 코드를 고쳐 필요한 기능을 만들 수 있다.
+It is great to explain the concepts behind an API and list all its objects
+in a reference,  but when it comes down to actually using the API, nothing
+beats sample code. If a developer can see a bit of code, and know that the
+code works to produce the desired result, then they can immediately plug
+that into their code and modify as needed.
 
-물론 샘플 코드를 그대로 복사-붙여넣기하고나서 아무것도 못하는 초보 개발자들이 있다.
-그들은 기본적으로 포럼내의 개발자들에게 샘플의 나머지 부분에 대해서 물어본다.
-좋은 샘플 코드를 제공 하면 실제 API를 배우는데 열중하지 않는 개발자가 몰려올 가능성은 있다.
-하지만 그런 위험보다 이점이 더 많다.
+Now, unfortunately, there are some developers that are very good at
+copying-and-pasting sample code word-for-word, and are useless to do anything
+with it after - and basically ask developers in the forum to write the rest of
+the code for them. So, there is a danger to having good sample code --
+attracting developers that don't bother to actually learn the API --
+but the benefits outweigh the risk.
 
-Google 샘플 코드는 실제(이론적이지 않은) API를 사용하는 것이어야 하고,
-주석이 달려 있어야 하며, 적합한 라이센스(예, Apache)를 가지면서 바로 실행 가능해야 한다.
-개발자가 사용하기 전에 작동하는지 시험할 수 있어야 하므로, 문서의 아래 부분에 링크가 
-걸려 있고 검색이 가능해야 한다. 코드 샘플 저장소를 확대하기를  원한다면,
-외부 개발자들이 만든 샘플을 공유할 수 있는 방법도 마련해야 한다.
+Good sample code should demonstrate actual (non-theoretical) uses
+of the API, should be commented, should be licensed appropriately
+(e.g. Apache). It should be runnable - developers should be able to
+prove that it works, before using it themselves. It be linkable and
+searchable, like the rest of the documentation. And, if you really
+want to be able to scale up your repository of code samples, you
+should have a way of showcasing samples created by external
+developers.
 
-우리는 Google API 전역에 거쳐 코드 샘플을 보여주는 2가지 다른 방법을 갖추고 있다.
+We have a couple different ways of showcasing code samples across
+Google APIs.
 
-`Maps API demo gallery`_ 는 발행된 Google 스프레드시트에서 
-데이터를 가져올 JavaScript를 사용한 단일 페이지이고, 
-개발자들이 데모들을 검색하고 살펴볼 수 있다.
+The `Maps API demo gallery`_ is a single page that uses JavaScript
+to pull data from a published Google Spreadsheet and lets
+developers search and browse through the demos.
 
-링크도 달려있고 검색도 가능하지만, 전체적으로 AJAX 주도로 만들어서져서 
-검색엔진에 의해 색인되지 않는다. 이는 개발자의 질문에 답할 수 있는 데모를 
-찾기 위해서 데모 갤러리가 존재한다는 것을 알 수 없다. 하지만, 본인이 개발자 
-포럼에서 갤러리내 빠른 검색에 대해서 응답했던 횟수로 비추어 보면, 대부분
-개발자들이 그런 갤러리가 존재하는지 살펴볼 생각을 하지 않는다.
+It is linkable and searchable, but since it's entirely AJAX-driven, it is not
+indexed by web spiders. This means that developers need to know
+that the demo gallery exists before they can search for demos
+that answer their questions. Based on the number of times that I
+responded to forum posts with a quick search in the gallery, my
+conclusion is that most developers do not know that it exists
+or think to look there.
 
-이 방법의 또 다른 단점은 구글러들이 각 샘플에 대한 정보안에서 입력해야 하므로,
-일정한 시간이 걸리고 많은 샘플이 있는 규모로 쉽게 확장되지 않는 것이다.
+Another drawback to this format is that a Googler must enter in the
+information about each sample, which takes a certain amount of time
+and means that the gallery does not easily scale to many samples.
 
 |mapsgallery|
 
-`Wave Samples Gallery`_ 는 App Engine app (`Open Source`_) 이다.
-외부 개발자들은 인증 후, 샘플 코드를 제출하려고 양식을 작성할 수 있다. 작성 후
-검토 상태로 들어가서 관리자들 그룹으로 메일이 간다. 우리는 그것을 확인하고, 
-단지 버튼을 한번 클릭하는 것으로 갤러리에 보이는 것을 승인할 수 있다.
-각 샘플들은 그 자체 페이지를 갖게 되고, 각 작성자들은 그 자체 페이지를 갖게 되며, 
-웹 검색 엔진이 가져갈 수 있다. (robots.txt에 의해서 크롤링 가능하다.)
+The `Wave Samples Gallery`_ is an App Engine app (and `open-sourced`_).
+Any developer can sign in, and fill out a form to submit a sample.
+That goes into a moderation queue, and a group of moderators is sent an email.
+We check it out, and with just a click of a button, we can approve
+it for display in the gallery. Then, each sample has its own page,
+and each author has its own page, and the whole app is fully indexable
+by web spiders (and that indexing is enhanced by a generated robots.txt).
 
-미묘한 이슈 하나는 이 데모 엔진은 기본적으로 데이터 저장소를 전문 검색하지 않으므로
-자체의 검색이 힘들다. 이를 방지하려면 태그로 기본적인 것을 걸러낼 수 있게 하고,
-구글의 사이트 전문 검색을 쓰면 된다.
+One tricky issue is searchability within the app itself, as App Engine
+does not yet enable full-text search over the datastore by default.
+To workaround this, the app offers the ability to filter by tags,
+and then embeds a Google custom search widget for full-text search.
 
-이를 통해 우리는 초기 작은 샘플 코드 수가 매우 쉽게 많아져서 성장할 수 있다.
-(결국 해프닝으로 끝나버린 Wave API에서도 많은 흥분을 제공했다.). 하지만, 성장력은 
-약점을 갖는다. 첫째로, 갤러리에 있는 것 중 실제로 무엇을 써야하고 거부해야 할지 
-결정하기 어려워진다.  일부 샘플들은 흥미롭지 않아도 누군가는 찾고 있는 것을지 모른다.
-둘째로, 샘플 갤러리가 상당히 성장했을 때, 개발자들이 전형적인 기본 샘플을 찾는 것이
-더욱 어려워진다. -- 단순한 샘플이 처음 시작하는 사람에게는 가장 쉽다. 이를해결하기 위해, 
-우리는 "Best Practices"와 "By Googler" 필터를 샘플 갤러리에 추가했지만, 완벽한 해결 
-방안은 아니다.
+This approach meant that we could grow from a small number of samples
+to a large number quite easily (and given the initial excitement over the
+Wave APIs, that's what ended up happening). However, that growability
+has its drawbacks. First, it can be hard to decide what actually belongs
+in the gallery, and what to reject. A particular sample may not show off
+something that is interesting to you, but it may be interesting to someone else
+out there. Second, when you've grown your samples gallery substantially,
+it becomes harder for developers to find the quintessential samples --
+the simple ones that are the easiest for them to get started with.
+To help remedy that, we added "Best Practices" and "By Googler"
+filters to the samples gallery, but it is not a perfect solution.
 
 |wavegallery|
 
-`Google Data APIS`_ 같은 API들은 Googler가 만든 샘플의 목록을 단순히 단일 페이지 목록에 포함한다. 
-이것은 사용 사례나 개발자 수가 적은 단순한 API에 대해서 적용하면 된다.
+Some APIs, like the `Google Data APIs`_, simply include a single-page
+list of Googler-created samples. This can work for a simple API
+with a smaller number of use cases or developers.
 
 |gdatagallery|
 
 .. TODO: Mention Chrome Extensions Samples
 
-여러분의 API에서 사용하는 것이 무슨 포맷인지 알 때, 적은 수의 목록을 나열하는 것과 
-다양한 샘플들을 나열하는 것 분 어떤 것이 개발자들에게 이득인지 신중히 고려 하고, 
-모든 경우에 여러분의 해결 방법은 검색 가능하고 링크가 달려 있어야 한다.
+When figuring out what format to use for your API, consider carefully
+whether developers would benefit more from a short curated list or
+from a diverse range of examples, and in all cases, ensure your
+solution is searchable and linkable.
 
 .. _Maps API demo gallery: http://code.google.com/apis/maps/documentation/javascript/demogallery.html
 .. _Wave Samples Gallery: http://wave-samples-gallery.appspot.com/
-.. _Open Source: http://google-wave-resources.googlecode.com/svn/trunk/samples-gallery/
+.. _open-sourced: http://google-wave-resources.googlecode.com/svn/trunk/samples-gallery/
 .. _Google Data APIs: http://code.google.com/apis/gdata/samples.html
 .. |mapsgallery| image:: ./screenshot_mapsdemogallery.png
 .. |wavegallery| image:: ./screenshot_wavesamplesgallery.png
@@ -336,48 +407,61 @@ Google 샘플 코드는 실제(이론적이지 않은) API를 사용하는 것�
 
 .. _code-playground:
 
-코드 개발터
-***********
+Code Playground
+****************
 
-일부 API 사용을 시작하는데 환경을 설정하는 것은 때때로 개발자들에게 많은 작업일 수 있다.
--- 때로 너무 많은 작업이라서 그것을 해보지도 못한다. 만약 개발자가 여러분의 사이트에서 
-어떤 설정도 하지 않고 바로 실행 시켜 볼 수 있다면,  API에 대해 흥미를 갖을 것이고, 
-향후에 기꺼이 사용하는 노력을 할 것이다. 동적인 코드 개발터가 문서에 대한 좋은 보완책이 
-될 수 있다.
+It can sometimes be a lot of work for a developer to setup an
+environment to start using a particular API -- sometimes, it's so
+much work that they don't ever do it. If a developer can start
+playing with API code live on your site, without any setup at all, and
+see what the code results in, then they're more likely to get
+excited about an API and put in the effort to start
+using it. That's why interactive code playgrounds are a nice
+complement to documentation.
 
-클라이언트 및 서버 사이드 또는 HTTP API 어느 것이냐에 따라, 코드 개발터는 다른 형태가 된다.
-Maps API와 약 20개의 다른 API들을 포함하는 AJAX API에 대해서 우리는  
-`Google Code Playground`_ 를 제공한다. 이 개발도구를 사용해서 개발자는 왼편에서 일부 샘플을
-선택할 수 있고, 코드의 결과를 미리 보고 수정하고 끝난 후 저장하거나 내보내기를 할 수 있다.
-
-이러한 방법으로 초기 작업을 해보고 준비 되었을 때, 간단한 작업 만으로 자체 개발 환경으로 
-변경할 수 있다. 이 프로그램은 App Engine 상에서 실행되고, 소스코드는 
-`google-ajax-examples repository`_ 에 공개되어 있다. 다른 API들도 그 자체 목적을 위해서 
-변경해서 재사용할 수 있다. -- Google의 `HTML5 playground`_ 또는 Google 이외에 
-`Mapstraction playeground`_ 같은 것들을 말한다.
+Depending on whether you have a client-side, server-side, or HTTP
+API, the playground come in different forms. For the AJAX APIs,
+including the Maps API and nearly 20 other APIs, we provide the
+`Google Code Playground`_. Using this playground, the developer can
+choose a particular sample from the left hand-side, preview the result
+of the code, edit the
+code, and save or export when they're done. That way, they can get
+started in the playground and migrate to their own environment when
+they're ready, with very little work. This playground runs on App
+Engine, and the code is open-sourced in the `google-ajax-examples repository`_,
+so that other APIs can re-use it for their own purposes -- like
+Google's own `HTML5 playground`_ or the non-Google `Mapstraction playground`_.
 
 |ajaxplayground|
 
-HTTP기반의 Google data API들 중 일부는 그 프로토콜과 의사소통할 수 있는 인터렉티브한 
-몇개의 애플리케이션을 제공한다.  `OAuth playground`_ 는 일부 API에 대한 인증 토큰 확인을
-쉽게 하고 일부 URL상에서의 GET 또는 POST 요청을 수행한다. 이 playground는 개발자들이 
-스스로 코드를 작성하기 전에 API의 결과를 미리 보고 미묘할 수 있는 그들 자체 응용프로그램 
-내에서의 OAuth 흐름을 디버깅할 수도 있게 도와준다. 
-이 프로그램은 `gdata-sampes repository`_ 에 소스가 공개되어 있고, 다른 OAuth 기반 API 
-작품에서 재사용될 수도 있을 것이다.
+For some of the Google data APIs, which are HTTP-based, Google offers
+several interactive apps for interacting with the protocol. The
+`OAuth playground`_ makes it easy to retrieve an authentication token
+for a particular API, and then do GET or POST requests on particular URLs.
+This playground both aids developers in previewing API results before
+writing their own code, and in debugging the OAuth flow in their
+own application, which can be tricky. That playground is
+open-sourced in the `gdata-samples repository`_,
+and could be reused by other OAuth-based API offerings.
 
 |oauthplayground|
 
-내가 가장 좋아하는 Google 이외의 playeground 제품 중 하나는 `Flickr API explorer`_ 이다.
-이것은 Flickr XML-RPC API의 최상위를 포함하여 모든 파라미터들을 지정해서 브라우저 내에서 
-그 결과를 볼 수 있다. 추가로, Flickr의 photoset에 기반한 파라미터에 대한 추천값을 
-제안하기까지 한다. 내가 Flickr api를 사용할 때,  내가 어떤 것을 어떻게 할 수 있는지 궁금할 때 
-난 항상 Flickr api explorer부터 본다.
+One of my favorite non-Google playground offerings is the
+`Flickr API explorer`_,
+which wraps on top of their XML-RPC APIs, letting you specify all
+the different parameters and previewing the resulting XML in the
+browser. As a bonus, it even provides developers with suggested values
+for the parameters, based on their own photosets. Whenever I'm using the
+Flickr API and wondering if I can do something or how I can do it,
+I always hit up that Flickr API explorer first.
 
 |flickrexplorer|
 
-지금까지 언급한 코드 개발터는 많은 기능을 제공한다 - 개발자들을 사로잡기에 좋은 방법이고, 
-API를 테스트하고 디버그하기 쉽게 하고, 또한 API를 가르치고 설명하기에 멋진 도구들이다.
+Playgrounds serve many purposes - they are great ways to get
+developers hooked, they make it easier to test and debug an API,
+and they are also fantastic devices for teaching and demonstrating
+APIs. Regardless of the reason you pick, they're a great addition
+to any set of documentation.
 
 .. _Google Code Playground: http://code.google.com/apis/ajax/playground
 .. _google-ajax-examples repository: http://code.google.com/p/google-ajax-examples/source/browse/#svn/trunk/interactive_samples
@@ -392,38 +476,43 @@ API를 테스트하고 디버그하기 쉽게 하고, 또한 API를 가르치고
 
 .. _developers-guide:
 
-개발자 안내서
-*************
+Developers Guide
+*****************
 
-개발자 안내서는 API를 어떻게 사용하는지에 대한 검토(walkthrough)이다. - 
-그것은 강사가 학생들에게 그 API에 대해서 어떻게 설명하는 것인지와 같은 것이지만, 
-온라인 출판물로 존재한다. 학생들 몇몇은 그 API가 처음일 것이고, 몇몇은 웹 개발이 
-완전 처음일 것이고 또는 오래된 전문가일 것이다. - 지침은 모두를 위해 작업해야 한다.
+A developer's guide is a walkthrough of how to use the API -
+it's like how a teacher would explain the API to their students,
+but it's penned down in digital ink (and there's no talking back!).
+Some of those students will be new to the API, some will be new
+to web development entirely, and some will be old pros -
+the guide should work for all of them.
 
-최소한 안내서는 API를 어떻게 시작하는지 설명해야 하고, 샘플 개발 코드에 대한 지식이 
-전혀없는 개발자를 끌어와야 한다. 만약 샘플 코드에서 개발 동기를 얻을 수 있다면, 
-단지 레퍼런스를 사용하는 API를 살펴보는 것 보다 훨씬 뛰어나다.
+At the minimum, a guide should demonstrate how to get started using
+the API, bringing the developer from zero knowledge to a working piece of code.
+If they can get to that minimal working piece of code, then they will feel
+much more motivated to continue exploring the API using just the reference.
 
-가능하다면, 안내서는 교육 형식을 통해서 최고를 배우려는 개발자를 위해서 API의 모든 
-면을 검토하고 있어야 한다.
+If possible, a guide can walk through *all* of the aspects of using the API,
+for the developers that learn the best through the instructional format.
 
 |mapsdevguide|
 
-`Maps API Developer's Guide`_ 는 종합 안내서의 한 예이다.
-안내서에는 API 각 부분이 어떻게 동작하는지에 대해 설명한 페이지가 있다.
-그 스팩트럼의 반대쪽에, Flickr API는 그들의 HTTP API가 어떻게 작동하는지에 대한
-`few paragrphs`_ 만 제공하고, 다음에 여러분이 API 사용을 시작하도록 API explorer로 
-링크를 걸어 준다.
+The `Maps API Developer's Guide`_ is an example of a comprehensive guide.
+For every aspect of the API, there is a corresponding page in the guide that describes
+how that part of the API works. On the opposite end of the spectrum, the Flickr API
+provides only a `few paragraphs`_ about how their HTTP API works, and then sends
+you off to the API explorer to actually start using it.
+A comprehensive guide is likely  more necessary for a JavaScript API
+than for an HTTP API, since a JS API can vary in how the different
+parts of it are used, whereas an HTTP API
+is typically the same request/response pattern for every action.
+(Note that Flickr does provide additional documentation on
+`user authentication`_, a topic that is not as straightforward as HTTP requests.
 
-종합 안내서는 HTTP API 보다는 JavaScript API를 위해 더 필요할 것 같다. 
-HTTP API가 모든 실행에 대해서 전형적으로 똑같은 요청/응답 패턴인데 반하여, 
-JS API는 그것의 다른 부분이 사용되는 방법을 바꿀 수 있기 때문이다.
-(참고로 Flickr는 `user authentication`_ 상에 추가적인 문서를 제공하고, HTTP 요청만큼 
-직접적인 주제는 아니다.
+Regardless of length, the guide should link to other aspects of the
+documentation - the reference, the samples, the playground, the articles
+- so that developers understand that those resources exist, and will hopefully
+explore them independently in the future.
 
-길이와 상관없이 안내서는 문서의 다른 부분들을 연결해야 한다 - 
-레퍼런스, 샘플, playground, 기사 - 그래서 그 개발자들은 그 자원들이 존재하는지 이해하고, 
-이후에는 스스로 그것들을 조사할 것이다.
 
 .. _Maps API Developer's Guide: http://code.google.com/apis/maps/documentation/javascript/basics.html
 .. _few paragraphs: http://www.flickr.com/services/api/misc.overview.html
@@ -433,48 +522,56 @@ JS API는 그것의 다른 부분이 사용되는 방법을 바꿀 수 있기 �
 
 .. _articles:
 
-튜토리얼
-*********
+Articles
+********
 
-개발자 안내서가 API의 기본 사용법과 그 기능을 전체적으로 개발자에게 
-알려줄 수 있다고 해도 같은 방법으로 모든 가이드를 해 줄 수는 없다. 
-즉, 개발자에게 또 다른 서비스, 프레임워크, 또는 API를 조합하는 것과 
-같은 API의 특수한 사용방법을 가르칠 때는 튜토리얼이 필요한 것이다.
+While a developer's guide should walk a developer through the basic
+usage of an API and its functionality, it can't cover every
+possible use of that API in a coherent way. That is where articles
+and tutorials come in, to teach developers tangential or
+specialized uses of an API, like combining it with another service,
+framework, or API.
 
-예를 들어, Maps API와 PHP & MySQL을 조합하는 것에 대한 튜토리얼이  
-내가 썼던 것 중 가장 인기 있었다. 난 데이터베이스로부터 지도위에 마커들을 
-렌더링 하는 `basic article`_ 을 시작했고, (분석 및 포럼 게시물 양쪽에서)
-그 기사를 읽은 개발자 수를 본 후, 나는 관련된 글을 쓰기 시작했고, 
-그것들을 다시 링크 걸었으며, 이후에는 연재물 형태와 비슷하게 되었다.
+For example, the most popular articles that I ever wrote for the
+Maps API were about combining it with PHP & MySQL. I started with
+a `basic article`_ on rendering markers from a database on a map, and after
+I saw the number of developers reading that article (both from the analytics
+and forum posts), I started writing related articles, and linking
+them back and forth to eachother to form a pseudo-series.
 
-튜토리얼 형식은 다양하다. - 일부는 (PHP/MySQL 튜토리얼 처럼) 시작부터 
-최종 결과물까지 순서를 보여주는 것도 있고, `Debugging Wave Robots`_ 같은
-팁 모음, 그리고 몇몇은 `Using Debugging Tools with the Maps API`_ 
-같이 시각적으로 과정을 설명하는 스크린캐스트가 될 수 있다.
+Articles vary in form - some are like tutorials that step you from
+beginning to a final output (like the PHP/MySQL tutorial), some are
+a collection of tips, like `Debugging Wave Robots`_,
+and some can be screencasts visually demonstrating a process, like
+`Using Debugging Tools with the Maps API`_.
 
 |screencast|
 
-이 각각의 형식들은 서로 다른 개발자들에게 호소하고 다른 내용에 대해 작업하고, 
-다른 형식을 취한 실험과 청중과 API에 대해 무엇이 동작하는지를 보여주는 
-좋은 것이다. 
+Each of those formats appeal to a different developer and work for
+different content, and it's a good thing to experiment with the
+different formats and see what works for your audience and API.
 
-운이 좋다면, 외부 개발자들이 쓴 많은 논설과 튜토리얼들을 볼 수 있을 것이다.
-할 수 있다면, 그 글들의 링크를 수집하도록 하고, 
-(그 글들이 비공식적인 것이라고 표시해서) 여러분 소유 문서에 제공해야 한다. 
-그 글을 쓴 사람들의 사이트 트래픽을 높혀주므로 그들에게도 좋고, 고마워서 
-글을 더 많이 쓸 것이고, 다른 관점에서 쓰여진 추가 자원들을 살펴 볼 수 있기 때문에
-개발자들에게도 좋다. 이들을 관리하기 위해서, 일반적으로 외부글들을 북마크 하고, 
-나의 알림 또는 트위터 스트림을 한달에 한번씩 보며, 그것들에 대한
-우리의 튜토리얼 페이지와 블로그에 추가한다.
+If you're lucky, you will see many external developers writing
+their own articles and tutorials. If you can, you should try to
+collect links to those articles, and provide them from your own
+documentation (denoting that they're non-official). It's good for
+the authors because it gives them more traffic to their site,
+making them feel appreciated and more likely to write more, and
+it's good for developers because it gives them additional resources
+to explore, written from different viewpoints. To manage this, I
+typically bookmark any external article I see from my alerts or
+twitter streams, and once a month, add them to our articles page
+and blog about them.
 
-우리 API 문서 사이트에 대한 분석에 따르면, 
-개발자들은 주요 개발자 안내서보다 튜토리얼 섹션을 방문할 가능성이 적다.
-아마도 그들은 해답을 "주요" 개발자 안내서에서 찾을 것으로 추측되기 때문이다. 
-개발자들이 튜토리얼으로 들어가는 것을 늘리기 위해서, 그 문서를 관련되고 의미있는 
-글에 링크거는 것을 추천한다.
+According to my analytics on our API documentation sites,
+developers are less likely to visit the articles section than the
+main developer's guide, maybe because they assume they'll find
+their answers in the "main" documentation. To increase the chance
+of a developer encountering an article, I recommend sprinkling the
+documentation with links to relevant articles, where it makes
+sense.
 
 .. _Using Debugging Tools with the Maps API: http://code.google.com/apis/maps/articles/debuggingmaps.html
 .. _Debugging Wave Robots: http://code.google.com/apis/wave/articles/robotdebugging.html
 .. _basic article: http://code.google.com/apis/maps/articles/phpsqlajax.html
 .. |screencast| image:: ./screenshot_mapsscreencast.png
-

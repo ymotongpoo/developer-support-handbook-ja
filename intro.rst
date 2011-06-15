@@ -1,116 +1,134 @@
-시작하기
---------
+Introduction
+------------
 
-외부 개발자 지원 길잡이는 여러분의 소프트웨어나 서비스를 이용하는 
-서드 파티 개발자를 어떻게 잘 도와 줄 것인가를 다루는 문서이다.
-본격적으로 다루기 전에 개발자 지원이 무엇이고 왜 중요한지 먼저 
-알아보자.
+Welcome to the handbook!
+Before diving into the particulars of developer support,
+it's important to realize what developer support is,
+why it's important, and where I'm coming from in writing this.
 
-배경
-^^^^
 
-수 년전, 웹 업계에는 아주 단순한 오픈 API들만 제공되었으나, 현재는 
-수 천개가 넘어섰고 웹 애플리케이션 개발자들도 데이터 제공자가 오픈 API를
-기본적으로 제공해 줄 것을 기대하고 있는 실정이다.
-
-오픈 API를 제공함으로서, 서드파티 개발자들이 창의성을 가지고 여러분의 제품을
-새롭게 확장 시키고, 새로운 유즈케이스를 만들고 사용자들에게 생각지도 못한 
-기능을 제공할 수 있다. 다시 말해, 외부 개발자들이 여러분의 제품이나 서비스를 
-더 깊이 있게 만들어 주는 기회를 제공하는 것이다. 예를 들어, Twitter는 처음부터
-간단한 웹 페이지 뿐만 아니라 API도 제공했으며, 개발자들이 사용자가 원하는 기능을
-가진 클라이언트 프로그램을 만들수 있었다. Twitter는 이로 인해 더 많은 사용자를 
-모을 수 있었고, 개발자들은 앱 판매로 돈을 벌 수 있었다.
-
-대부분의 경우, 단순히 API만 제공하는 것으로 충분치 않다. 이를 사용 중인 개발자를
-계속 도와주어야 한다. 개발자의 요구와 서비스 방향의 필요성과의 균형을 맞추어 
-API 기능을 향상 시켜야 하고, 더 많은 개발자들이 API를 사용하도록 홍보해야 한다. 
-결과적으로, 여러분이 좋은 API를 가지고 있으면 더 많은 개발자들이 사용할 것이고 
-이 때문에 더 많은 개발자 지원과 요구에 맞는 API 기능 향상을 필요로 한다. 만약,
-API를 제공하기로 했다면, 이를 제대로 하기 위해 몇 가지 중요한 업무를 지정할 
-필요가 있다. 누가 API를 개발하고, 유지 및 향상 시키고 "전도(evagelize)"하는 것을
-API서비스 전반에 미래를 바라보고 사람을 지정해야 한다. 만약, API에 시간과 자원을
-투자하기 원치 않는 다면, API 제공 그 자체를 재검토 해야 한다.
-
-본 길잡이에서는 주로 API를 제공하는 데 가장 중요한 측면인 "개발자 지원"을 다룬다.
-매우 중요하고도 매력적인 일이다. 세상에서 가장 멋진 API를 제공하더라도, 개발자들이
-포럼에 질문을 올리고 답을 제대로 못 받는다면, 사람들은 흥미를 느끼지 못하게 된다.
-한편, 여러분이 외부 개발자들을 잘 지원한다면 API가 좀 기능이 떨어지더라도 어떻게
-향상시키면 좋을 것인가 통찰력있고 가치있는 의견을 내어 줄 뿐만 아니라 다른 사람에게
-API를 홍보해 주는 역할까지 할 것이다.
-
-오픈 API에 대한 외부 개발자 지원이란 영역은 매우 새로운 분야이고, 일하는 사람도 
-많지 않다. 따라서, 무엇을 어떻게 하고, 어떤것을 하지 말지 잘 알려져 있지 않다. 
-API 서비스 제공자들이 더 늘어남에 따라, 더 많은 사람들이 API 지원 업무를 제공할 
-것이기 때문에 이 분야의 문서화를 시작할 필요가 있다. 이 길잡이는 그러한 목표의 
-첫번째 시도이다.
-
-업무 원칙
-^^^^^^^^^
-
-이 장은 본 길잡이에서 다루는 분야의 특징과 함께 이를 위한 기본 원칙들을 소개한다.
-
- * **개발자를 도와주어라**:
-   어떤 도움이라도 빠르게 제공해야 한다. 개발자들이 여러분의 API로 성공을
-   하지 못한다면, 지원 업무 자체를 제대로 못하는 것이다. API 버그로 인해 
-   개발자들의 웹 사이트가 깨지고 문제가 되는 것에 별로 마음이 아프지 않거나 
-   개발자들이 어떤 앱을 하나 완성했을 때 희열을 느끼지 못하면 여러분에게 
-   적합하지 않는 일이다.
- * **눈높이에 맞추어 공감하라**:
-   자신을 외부 개발자 눈눂이에 맞추어야 한다. 만약 여러분이 API 개발자라면, 
-   어떤 점이 중요한지 알아야 한다. 필자는 구글에서 지도 API 개발자 지원을 
-   하기 전에 실제 개발을 했었기 때문에 API에서 중요한 점을 알 수 있는 기회가
-   있었다. 만약, 그렇지 않다면 내부 자원 없이도 API로 어떤 작업(샘플 코드)을
-   수행해 가면서 서비스 개발 경험을 체험해 볼 필요가 있다. 공개 문서와 포럼을
-   이용해 질문과 답을 하면서 무엇이 좋고 나쁜지 찾아보는 훈련을 해야한다.
- * **정보를 늘 공유하라**:
-   API 제공자로서, 여러분은 매우 많은 정보를 가지고 있다. API가 어떻게 동작하고
-   언제 어떻게 새 버전을 내고 앞으로 어떻게 할지 같은 정보를 외부 개발자들이 
-   예측할 수 있도록  자주 자세히 알려주어야 한다. API에 대한 작은 정보라도 즉시
-   공유하여야 하며, 공유하지 않기로 했다면 그 결정이 왜 필요한지 명확한 이유를 
-   공유해야 한다. 
- * **항상 의견을 청취하라**:
-   API를 이용하는 개발자라면 항상 질문을 가지고 있을 수 있다. 어떤 이슈에 대한 
-   의견이나 제안도 가지고 있을 것이다. 이러한 생각들을 자유롭게 이야기할 곳이 
-   필요하고 늘 귀기울어야 한다. 어떤분은 개발자 의견을 청취하는 것이 마치 그들이
-   원하는 것을 모두 해 주어야 만족한다고 걱정하기 쉽다. 하지만 대부분의 경우,
-   개발자들은 그들의 의견을 들어주고 반응해 주는 것만으로 만족한다.
- * **늘 감사를 표하라**:
-   모든 사람은 자신이 만든 작업에 고마워하는 것을 좋아한다. 칭찬이나 고마움을 
-   위해 그 작업을 하지 않았더라도 말이다. 어떤 개발자가 여러분이 API를 잘 제공
-   하는데 여러모로 도움을 주었다면 (예를 들어, 샘플 코드, 문서 및 포럼 글쓰기)
-   그들에게 항상 감사를 표하고 중요한 역할을 해 주었음을 인식하도록 해야 한다.
-
-이 책의 나머지 부분을 읽지 않으시더라도, 아주 간단한 이들 원칙을 기억하고 실행한다면
-개발자들이 오히려 여러분을 바른 결정을 하도록 도와 줄 것이다.
-
-저자 소개
+Background
 ^^^^^^^^^^
 
-본 길잡이의 원저자인 Pamela Fox는 다양한 Google API의 개발자 커뮤니티를 지원하는
-업무를 수행했다. 지도 API의 개발자 중 하나이며 Wave API을 직접 개발하기도 했다.
+A few years ago, there were only a handful of APIs on the web.
+Now, there are thousands, and there is almost an expectation that
+a web application or data provider will provide an API.
 
-API 지원 엔지니어로서 API 개발자와 내부 개발팀 사이의 중재자로서, 외부 개발자들이
-그들의 서비스와 비지니스를 잘 하도록 돕고 있다. 즉, 포럼 내 답이 없는 질문을 항상
-모니터링 하고, 내부 개발팀에 버그를 보고하고, 개발자들이 원하는 가장 많은 요청이 
-무엇인지 확인하고, 샘플 코드 및 문서 작성 및 블로그 포스팅, 기술 컨퍼런스 발표 및 
-유료 고객을 교육하는 일을 맡았다. 이들은 매우 다른 재능이 필요하며 기술 혹은 
-커뮤니케이션 양쪽에 능숙해야 하는 도전적 업무이다.
+By providing an API, you can enable developers to use their creativity
+and skill to extend your products to new environments, to handle new use cases,
+or to appeal to new users. In the best of worlds, you can make
+your product more compelling while also giving developers an opportunity
+to make a living off your product API. For example: Twitter started with a simple
+web interface but also a simple API, and because of that API, developers
+were able to create the clients that users wanted, so Twitter got more users
+and developers got more money.
+
+Most of the time, it is not enough to simply provide an API.  You also need to
+support the developers that are currently using the API, improve the API to
+better meet the balanced needs of the product direction and developers, and
+encourage more developers to start using the API.  All of this is a cycle: when
+you have a good API, more developers will want to use it, which means you will
+have more developers to support, and you will need to keep improving the
+API to meet their needs. To do it right, you need to understand the commitment
+that you are making when you decide to provide an API.  You need to realize that
+you will need someone support the API, someone to maintain that API (if not
+improve it), and often you will want someone to "evangelize" that API - and you
+will need these somebodies (whether it's one person or many) for the foreseeable
+lifetime of the API. If you are not willing to invest that much time and
+resources into the API, you should reconsider your decision to provide one.
+
+In this handbook, I mostly cover the first aspect of providing an API: support.
+It is probably the least glamorous aspect, but on the other hand, it is vital.
+You can have the best API in the world, but if people post in your forums and
+the response is just crickets chirping, then the developers will not stick
+around for very long.  On the other hand, if you treat your developers well,
+then they will (for free) provide you with valuable insights about ways to
+improve your API, and they will evangelize your API for you.
+
+The area of developer support is quite new, and there isn't much written about
+how to do it - what works, what doesn't. Given the increasing number of APIs,
+and I hope, the increasing number of people attempting to support API
+developers, we need to start documenting our field. This handbook is a first
+attempt.
 
 
-역자 소개
+Guiding Principles
+^^^^^^^^^^^^^^^^^^^
+
+The chapters in this handbook deal with specifics, but are all based on these
+general principles:
+
+ * **Care about your developers**:
+   Call me a sap, but I think that you can't really do a good job at
+   supporting developers if you don't actually care about their success
+   with your API. If your heart doesn't ache a little when you realize
+   you've introduced an API bug that breaks a developer's site, or
+   if you don't get a little shot of glee when you see a developer's finished
+   app, then this may not be the right role for you.
+ * **Empathize with your developers**:
+   Put yourself in your developer's shoes. If you were a developer of your API,
+   how would you want to be treated?
+   I was a Maps API developer before I became the Maps API support
+   engineer at Google, so I had the fortunate experience of knowing exactly what it felt
+   like. If you don't, you can simulate that experience to a certain extent
+   by trying to accomplish some task with your API, and not letting yourself
+   use any internal resources. Force yourself to read the public docs
+   and search the public forum for answers, and remember what is good
+   and bad about that experience.
+ * **Keep your developers informed**:
+   As the API provider, you are the holder of a massive amount of useful
+   information: you know how the API works, you know when you've released a new
+   version, you know your roadmap. The more information that you can convey
+   to developers, the easier it is for them to use your API.
+   For any piece of information you have about your API, your default should be
+   to share that information, and if you decide not to, you should have a good,
+   thought-out reason for that decision. (There are valid reasons - just
+   make sure you're not withholding without one).
+ * **Listen to your developers**:
+   As they use your API, your developers will have questions, they will have
+   comments, and they will have suggestions. Your developers should have a place
+   (or multiple places) to make their thoughts known, and you should make it
+   known that you are listening to them. Some folks worry that listening to
+   developers means that you must do what they tell you to, and that's not the case.
+   Most of the time, developers are just happy that they've been heard.
+ * **Appreciate your developers**:
+   Everyone likes to be appreciated for good work - even if they don't *need* to
+   be appreciated. If a developer is helping you do your job by making the API
+   more successful (then by samples, articles, or forum posts), you should let
+   them know you sincerely are thankful for their help.
+
+If you read nothing else in this handbook, simply remember those principles,
+and they can guide you in making the right decisions.
+
+
+About the Author
 ^^^^^^^^^^^^^^^^
 
-본 길잡이의 한국어판은 Daum 오픈 API를 제공하는 다음커뮤니케이션 DNA Lab 팀원들이 
-번역하였다. Daum DNA는 2006년 8월 정식 오픈하였으며, Daum API를 사용하는 국내 외부 
-개발자 지원 업무를 담당하고 있다. 2010년 현재 총 14종의 API를 제공 중이고, 매월 
-1억 5천만건의 쿼리를 처리한다. 
-더 자세한 것은 Daum 개발자 네트워크(http://dna.daum.net)을 참고하면 된다.
+I'm Pamela Fox, and I've spent the last four years supporting the developer
+community for various Google APIs.  I started on the Maps API, back when Google
+had only a handful of APIs and we were very new to this game, and then spent a
+year on the Wave APIs.
 
-이 책을 보실 분
+In my role as an API support engineer, I am basically the middleman (middle
+woman) between the API developers and the API engineering team, and I am tasked
+with making sure that API developers are successful. This means monitoring the
+forum for unaswered questions, reporting bugs to the team, collating the top
+feature requests, creating sample code, writing articles, authoring blog posts,
+presenting at conferences, training paying customers, and more. It's a fun role
+because it involves a lot of different skills, and it brings a wide range of
+technical and sociological challenges.
+
+In this role, I have learned a lot about what it means to succesfully support a
+developer community, and I want to share those learnings through this handbook.
+
+
+Intended Audience
 ^^^^^^^^^^^^^^^^^
 
-구글에는 개발자 지원팀이 있으며 많은 동료들이 여기에서 같은 업무를 가지고 근무하고
-있는 중이다. 만약 여러분의 제품 혹은 서비스가 외부에 공개된 API가 있고, 외부 사용자에게
-이에 대한 정보를 제공 하고 도와주는 업무를 맡고 있다면, 이 길잡이를 읽어야 한다.
-여러분이 회사 내 서비스 기획자, 개발자 혹은 마케팅 팀의 일원이면서 제휴 파트너와 함께
-협력하는 일을 하고 있다면 이 가이드가 일정 부분 도움이 될 것이다.
+At Google, I come from a team called Developer Relations, and many
+of my peers in this team have the same role as me, but for our other APIs. This
+information is most directly targeted at them.
+However, there are many other people who interact with the API
+developer community at some point during their day, and this information is
+still highly relevant to them - the API tech lead, product manager, engineering
+team, marketing team, technical writer, support team, etc.

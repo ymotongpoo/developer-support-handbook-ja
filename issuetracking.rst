@@ -1,38 +1,81 @@
-이슈 트래킹
-###########
+Issue Tracking
+##############
 
-공개 된 웹API를 개발하는데 어려운 부분중 하나는 대상 고객을 알수 없고 사용하는 방법이 쉴수없이 다양하다는 것이다. 만약 API를 회사 내부를 위한 목적으로 설계 할 경우 동료들이 어떻게 사용할지와 원하는 방향을 보다 쉽게 이해할 수가 있을 것이다. 반면 전세계에 어디서나 사용 될 목적으로 API를 설계할때 대부분 어떠한 방법으로 사용할지 예상 할 수 있지만 그렇지 못한 전혀 다른 방법으로 사용하려는 소수의 개발자들이 있다는 것을 알아 두어야 할 것이다.
+A public web API is one of the hardest types of software to write, because your
+audience is unknown and their use cases are infinite. If you are designing an
+API for internal use within your company, you can pretty much understand how
+they are expecting to use it and make it do what your colleagues want.  But when
+you are designing an API that can be consumed by any web developer anywhere in
+the world, you can predict how a good portion of those developers will use it -
+but there will always be a fraction that wants to use it differently.
 
-최근 300,000명 이상의 개발자들이 구글맵 API를 사용하고 있으며 대부분 단순하게 페이지에서 지도를 보이고 지도 위에 마커를 적용하고 있다. 하지만 그 외 소수 개발자들은 전혀 다른 방법으로 API를 사용하고 있다. 당신은 그 소수를 무시할수 있지만 종종 이러한 혁신적인 개발자들은 많은 사용자를 끌어 모으고 다른 개발자들을 자극하게 할 수 있게 한다.
+At last count, the Google Maps API is used by more than 300,000 developers. Most
+of them are simply putting a map on a page, and dotting some markers on top.
+But a handful of them are using it for something completely different. You could
+ignore that handful, but often times, those innovative developers are the ones
+that attract many users and get other developers excited about your API.
 
-말하고자 하는 요점은 당신의 API를 사용하는 모두에게 최소한 완벽하지 않다라는 것이다. 당신의 API는 개발자들이 예상하지 못한 크로스 브라우저 호환이나 개발자가 원하지 않은 애매한 버그가 있을 것 이고 또한 개발자들이 원하는 기능이 다소 부족할 것이다. 개발자들은 당신의 API가 완벽하다고는 여기지 않겠지만 그래도 그들의 버그와 기능요구의 목소리들을 귀기울이여야 할 것 이다. 그리하여 귀하의 API의 다음 버전을 구체화 하는데 도움이 되고 당신의 API를 사용하는 개발자들에게 귀기울이고 있다는 것을 알게 될 것이다. (요구하는 모든 기능을 구현하거나 모든 버그를 수정 하지 않아도 되지만 그거와 상관없이 귀기울어야 한다.)
+The basic point is this: your API is not perfect, atleast not to everyone using
+it. Your API will have bugs that developers suffer from (both the obvious
+cross-browser compatibility bugs, and the more subtle
+its-not-what-the-developer-expected bugs) and your API will lack in features
+that developers want. Developers don't expect your API to be perfect, but they
+do expect for their voice to be heard when they report a bug or request
+a feature. Your developers should be helping you shape the future of your API, and
+listening to their issues is a way of showing them that you care about their
+feedback.  (You don't need to implement every feature or fix every bug, but you
+should listen regardless).
 
-소규모로 시작하게 되면 포럼을 통해서 관리 할 수 있지만 개발자와 버그들의 한계상황에 도달하게되면 이슈 트래커를 사용해야 할 것이다.
+When you're small and starting out, you can handle
+this in a forum, but when you get beyond a certain threshold of developers and
+bugs, you really should start using an issue tracker.
 
 
-이슈 추적기의 기능
+Issue Tracker Features
 **********************
 
-이슈 추적기는 개발자들의 필요와 요구를 구조화한다. 일반적으로 다음과 같은 기능을 포함한다.
+An issue tracker is a structured way for developers to voice their needs and
+wants, and it typically includes these features:
 
-* **댓글**: 다른 개발자들에게 이슈에 대한 해결방법을 남기고 추가적인 정보나 사용사례를 줄 수 있는 기회를 제공한다.
-* **투표**: 문제에 대한 서로 다른 개발자들과의 지지를 보여주는 방법을 제공한다.(별표 또는 투표)
-* **상태**: API 팀은 이슈의  Open에서 Closed 그리고 그 사이에  상태를 변경하는 방법을 제공한다.
-* **중복**: API팀은 중복되는 이슈를 표시하고 발행하여 관심있는 모든 개발자들의 동일한 이슈에 대한 구독을 할 수 있게 방법을 제공한다.
-* **알림**: 이슈가 해결 되었을 때 관심을 가졌던 개발자들에게 바로 알려준다.(이메일이 가장 좋음) 그래서 그들이 이슈를 회피한 코드나 정지 시킨 기능을 제거하도록 한다.
-* **범주화**: API팀은 여러가지 측면에 영향을 미치는 이슈를 찾을 수 있도록 분류하는 방법을 제공한다.
-* **검색**: 누구나 이슈를 검색 및 정렬 하여 관련된 이슈를 찾을 수 있도록 제공한다.
-* **통계**: API팀은 대부분의 개발자들이 중요하게 여기는 문제를 시각화 하여 내부 로드맵의 우선순위를 지정하는데 도움이 되는 기능을 제공한다.
+* **Comments**: Gives other developers an opportunity to comment on the issue, to
+  give workarounds, additional data, or additional use cases.
+* **Votes**: Gives other developers a way to show their support for an issue (like by
+  starring or voting for it.)
+* **Status**: Gives the API team a way to change the status of issues, from Open to
+  Closed, and everything in between.
+* **Duplicates**: Gives the API team a way to mark issues as duplicates of eachother,
+  so that all interested developers are subscribing to the same issue.
+* **Notification**: Notifies interested developers immediately when an issue is
+  closed (ideally by email), so that they can remove workarounds in their code
+  or add blocked features.
+* **Categorization**: Gives the API team a way to categorize the issues to make it
+  easier to find issues affecting different aspects of the API.
+* **Search**: Gives everyone a way to search and sort for issues that may be
+  relevant to them.
+* **Statistics**: Gives the API team a way to visualize which issues are the most
+  important to developers, to help them prioritize their internal roadmap
+  accordingly.
 
-다양한 공개 오픈소스의 이슈 추적 시스템이 있으며 그것들 중 대부분은 어느 포럼 소프트웨어나 소스 코드 저장소를 호스팅하는 소프트웨어와 연동이 된다. 가끔 이슈를 추적 기능만 사용하도록 선택할 수 있다. 다음은 많이 사용되는 것들이다.
+There are various public and open-source issue tracking systems,
+and many of them are related to either forum software or source code repository
+hosting software. You can often choose to only use the issue tracking aspect,
+however. Some popular ones are:
 
-* `JIRA`_: 프로젝트 추적으로 사용할 수 있으며 이슈 추적의 모든 기능을 제공한다.
-* `Github`_: git 소스 호스트는 각각의 저장소에 대해 간단하지만 거의 모든 기능들을 갖춘 이슈 추적 기능을 포함하고 있다. 
-* `Google Code Project Hosting`_: 이 코드는 각각의 프로젝트를 위한 이슈 추적을 포함하고 있으며. Github와 유사하지만 더 많은 사용자 정의 및 통계를 포함한다.
-* `Bugzilla`_: 모질라에서 만들어진 오픈소스로 이슈 추적에 모든 기능을 가졌으며 모질라에서 만들어진 제품에 사용되었다.
-* `Trac`_: 모든 문제 추적 기능을 포함하고 오픈소스이며 원한다면 Subversion과 연동 할 수 있다.
+* `JIRA`_: A full-featured issue tracker which can also be used for project
+  tracking.
+* `Github`_: A git source host that includes simple but nearly full-featured
+  issue tracking for each repository.
+* `Google Code Project Hosting`_: A code project host that includes issue
+  tracking for each project. Similar to Github issue tracking, but with
+  more customization and statistics.
+* `Bugzilla`_: A full-featured and open-source issue tracker, created by
+  Mozilla and used by their products.
+* `Trac`_: A full-featured and open-source issue tracker which can be
+  connected to a subversion repository if desired.
 
-구글 API에 우리는 항상 Google Code Project Hosting을 사용 하여 가장 익숙하다. Google Code issue tracker를 설치에 대해 심도 있게 아래에 설명하였다.
+For Google APIs, we always use `Google Code Project Hosting`_, so I am the most
+familiar with that. Read below for an in-depth discussion of setting up
+a Google Code issue tracker.
 
 .. _`JIRA`: http://www.atlassian.com/software/jira/
 .. _`Github`: http://www.github.com
@@ -41,64 +84,135 @@
 .. _`Trac`: http://trac.edgewall.org/
 
 
-이슈 관리 가이드라인
+Issue Handling Guidelines
 *************************
 
-어떤 이슈 추적기를 선택 하고 어떤 기능이 있든진 당신은 이슈를 적절하게 답변하고 API를 더 풍성하게 하는 방향을 가기 위해 알아서 대응 해야한다.
+Regardless of which issue tracker you choose and what features it has,
+you should take care in responding to issues in a timely manner and
+reacting to issues in a way that benefits your API.
 
 
-이슈 응답하기
+Responding to Issues
 ====================
 
-이슈 추적기를 제품을 위해 사용 할때 정기적으로 즉시 응답하여야 할 것 이다. 어떠한 이유로 이슈들에 대해 응답을 하지 않는다면 개발자들은 혼란스러운 상황 속에서 발생하는 또 다른 버그들을 계속해서 보고할 것이고, 여러분은 아무런 소득없이 원점으로 돌아가야 할 것이다.이슈에 응답하기에 적절한 시기는 일주일 정도로 즉 새로운 모든 이슈들은 일주일 이내에 응답하는 것 이다. 이것에 확실한 몇가지 방법이 있다.
+When you have an issue tracker for a product, you should make sure to be
+responsive to it on a regular basis. If you don't respond to filed issues,
+developers will feel once again that they're filing bugs into an abyss, and
+you're back at square one. A good response rate to maintain is weekly - i.e. all
+new issues are responded to within a week of filing. There are a few ways to
+make sure of this.
 
-이메일 필터
+EMail Filters
 -------------
 
-GMail 받은 편지함에 새로운 이슈가 올때 지정된 필터를 통하여 자동으로 특정API를 라벨로 표시를 하는데 아주 간단해 보이는 이슈 일 경우 즉시 응답 할 수 있으며(중복이나 잘못 지시된 이슈의 경우) 그렇지 않을 경우 "진료 대상"라는 태그를 부여 하고 보관한다. 저자는 GMail에 받은편지함에 multiple inboxes을 lab에서 설치 하고 "진료 대상" 편지함을 메인 메일 아래에 놓아 해당 되는 이슈가 응답이 필요하다는 것을 보여지게 한다. 그 다음 작업시간에 몇일간 메일을 확인하고 새로운 이슈 중 이전에 온 것 먼저 응답을 한다.
+When a new issue comes into my GMail inbox, I set filters so that it is
+automatically labeled as an issue for a particular API (Maps, Wave, etc). If I
+see that the issue is very easy to respond to (like if its a duplicate or a
+misdirected issue), then I may immediately respond. If not, I add the tag
+"TRIAGE-LATER" and archive it. I have GMail setup using the multiple inboxes
+lab, so that the "TRIAGE-LATER" inbox is below my main one, a constant reminder
+of issues that need a response. Then, I can check that label every few days at
+work, and respond to the issues, in the order of oldest to newest.
 
-심사 회의
+Triage Meetings
 ---------------
 
-보통 질문들에 대해서 쉬원하게 답변을 하지 못할 경우가 있다. 그럴때 주위에 활용 가능한 자원을 사용해야 하는데 동료와 함께 공유할 경우 보다 좋은 경험을 할 수 있다.
+It's not always so fun to respond to isses by your lonesome - you may not feel
+confident in your answer, you may not know enough to respond, etc. When you have
+the resources to do so, it can be a much better experience to triage with
+colleagues.
 
-지도API에서 우리는 직접 진단해 보고 진료순서를 정하였으며 JS API 엔지니어는 첫번째, Flash API 엔지니어는 마지막번째에 배치했다.
+On Maps API, we did triage meetings in person, and ordered the triaging by API,
+so that the JS API engineer only had to be there for first bit, and the Flash
+API engineer only had to be there for the last bit.
 
-우리는 Wave 안에서 선별 작업 미팅을 했고 결과적으로 그것은 매우 잘한 일이었다. 일주일에 한번, 나는 나의 팀 동료들과 Wave를 통해 선별되지 않은 이슈들을 API 엔지니어링 팀 메일 리스트에 넣는다. 그리고 나서 팀동료들과 나는 버그를 고칠 때 이를 Wave 상에 표시하며 잠시동안 그 버그들에 대해 이야기를 나누고 이슈 사항들에 대한 응답을 표시한다. Wave 에서 이와 같은 작업들을 함으로써 우리는 동시에 여러가지 업무를 할 수 있었다.  나의 동료와 버그에 관하여 채팅하며 버그를 작업 하였고 우리는 두번씩이나 버그를 진단하여 완료했다. 만약 우리가 API 엔지니어링팀 일원이 자신의 의견을 말하기를 원한다면 우리는 Wave 상에서 그와 채팅하기도 했다. 우리는 또한 해답이 없는 포럼의 글들이나 그와 비슷한 문제로 답하기 어려운 것들을 공유하는데도 사용하였다.만약 특정 주에 있는 이슈에 파동이 크다면 우리는 진료 일정을 추가한다. Wave는 이제 사용되지 않지만 아마 Google Docs 를 비슷한 방식으로 사용 될 수 있다.
+On Wave APIs, we conducted the triage the meetings inside a Wave, and it worked
+remarkably well. Once a week, I'd start up a wave with my colleague and the API
+engineering team mailing list, and paste the non-triaged issues in.
+Then, my colleague and I would pick a bug, indicate in the wave that we're
+looking at it, converse about it for a bit, and indicate when we'd responded to
+it. By doing it in one wave, we were able to multi-task. I could work on a bug
+while still chatting with my colleague about his bug, and effectively, we get
+twice the bug triaging done. If we wanted a member of the API engineering team to
+give his opinion, we could bring him on the wave. We also used those meetings to
+respond to unanswered forum posts, as we had a similar response time goal for
+those. If there was a surge in issues in a particular week, we scheduled
+additional triage meetings. Wave is now deprecated, but perhaps Google Docs
+with commenting could be used in a similar way.
 
-일부 API 또한 채팅, IRC 등을 이용 한다. 그것이 정말 중요한건 당신을 위한 적절한 시간에 답변을 하고 효율적인 자세로 이슈를 대응하는 것이다.
+Some APIs also do their triaging over chat, IRC, etc. All that really matters is
+that you are responding to issues in a timely and efficient manner, in a way
+that works for you.
 
 
-이슈 반영
+Reacting to Issues
 ==================
 
-이슈 추적기의 한가지 장점은 해당 데이터가 버그를 사용할지 또는 기능을 충족 시킬지 방향을 제시할  수 있다. Google Code issue trackers는 별표 그리고 정렬이 가능하여서 이슈를 참조 하는데 매우 간단하다. 또한 당신의 제품 결정의 방향을 제시하기 쉽다. 하지만 기능 요청이 요구 될때는 불안 할 수 있다.
+One of the benefits of an issue tracker is that its data can be used to guide
+product decisions, like what bugs to fix or features to fulfill. Google Code
+issue trackers have the "starring" mechanism and sort-by-starring, so it is very
+easy to look at your issues and see which have been starred the most. It is also
+very easy to let that guide all of your product decisions - but it is dangerous
+to do so, particularly when it comes to feature requests.
 
-우리는 처음 Flash를 위한 Maps API를 런칭 했을 때 Flash 커뮤티니의 반응은 반가워 하였고 몇 명 개발자들은 “AIR는 왜 지원 안하나요?”라고 하였다. 그런 다음 AIR 지원을 위한 기능 요청을 만들었고, 그들의 블로그에서 그 요청에 별표를 붙히려고 개발자에게 문의를 했다. 우리는 이전에 다른 요청들보다 AIR 요청이 더 많이 활성화 된 것을 보았고 우리는 처리하기로 하였다. 우리는 AIR를 위한 API를 고생하며 만들었고 런칭 하였으며 많은 응답과 개발자들이 늘어나길 기대 하였다. 하지만 기대만큼 일어나지 않았다. 확실히 몇 달이 지나서야 증가 하였지만 요구에 별표 개수가 비례가 없었다.
+When we first launched the Maps API for Flash, the Flash community rejoiced-
+and then a few vocal developers said "But why is there no AIR support?" They
+then created a feature request for AIR support and asked developers to star it
+in their blogs. We saw more activity on that AIR request than on any other
+request previously, and we acted on it. We went through a fair bit of
+engineering effort to make our API work for AIR, and we launched it, expecting a
+large response or increase in developers. This didn't happen. Sure, a few AIR
+apps trickled in over the next few months, but nothing proportional to the
+amount of stars on that request.
 
-그래서 당신은 기능 요청을 평가 할때 조심해야 할 필요가 있다. 당신은 이슈가 누군가에 의해 블로깅 되었거나 링크 된 것 인지 조심해야 하며 아마도 그 것들의 별표는 부정확할 것이다. 이 기능 요구가 개발자들이 “자격이 있다"라고 느끼는 것에 비해 그들이 무엇을 원하는지 대부분의 개발자들이 깨닿지 못한다면 당신은 결심이 필요하다. 하지만 존재 하는경우 아주 많이 사용 할 것이다. 당신은 또한 요청이 더많은 개발자들을 가져올지 현재 사용자를 행복하게 만들지 결정이 필요하다.  당신은 확실히 별표 사용 안내를 사용할 수 있다. 하지만 그들에게 당신을 위한 결정을 만들어서는 안된다.
+So, you need to be careful when evaluating feature requests. You need to pay
+attention to whether an issue was blogged or linked by someone - that will
+distort the # of stars. You need to decide if this is a feature request that
+developers feel they "deserve to have" versus a request that most developers
+don't realize they want, but will use up-the-wazoo if it existed. You also need
+to decide what requests will bring in more developers versus make the current
+users happier. You can use stars to guide you, certainly - but don't let them
+make the decisions for you. (As we learned the hard way).
 
-다른 한편 별표를 사용하여 일정을 관리하는데 아주 우용하기도 하지만 그 숫자는 종종 왜곡 될 수 있다. 예를 들어 만약 개발자가 버그에 몇개월 동안 다른 개발자의 별표가 없으면 그 버그는 매우 낮은 우선 순위로 가정 할 수 있다. 버그 우선순위가 낮거나 수정하지 않을 것 만약 개발자가 반복적으로 버그 그리고 10명의 다른 개발자 별표 같은날 추가된다면, 그때 우선순위 높은 버그로 하기 좋은 기회이다. 당신은 버그들을 방지하는 더 나아간 개발 그리고 버그들의 가능한 해결방법을 가져야 하는 마음가짐을 가지고  지속해야 한다. 당신도 이슈를 "Workaround-True"으로 분류하여 시각적으로 짜증나지만 간단하게 만들 수 있다. 개발자들은 이슈를 해결하는 작업을 사용한다.(특히 웹) 그리고 만약 그들의 쉬운 해결 방법을 구현할 수 있다면 종종 행복하다. 만약 그것이 없다면 당신은 더 나은 통계에서 버그수정을 얻을 것이다.
+On the other hand, it is quite useful to use stars to guide your bug fixes
+timeline, as those numbers aren't often distorted. For example, if a developer
+files a bug, and no other developer stars that other bug for months, then you
+can probably safely assume that the bug is a very-low-priority or wont-fix. If a
+developer files a regression bug, and 10 other developers star it on the same
+day, then there is a good chance that it is a high-priority bug. You should keep
+in mind which bugs are preventing further development and which bugs have viable
+workarounds - you may even want to label an issue with "Workaround-True" to make
+it easy to visualize that. As much as it sucks, developers are used to working
+around issues (especially on the web), and are often happy if they have an
+easy-to-implement workaround. If there's none at all- well, you better get that
+fix in stat.
 
 
 Google Code Issue Tracker
 *************************
 
-구글에서 일을 시작할때에 API에 대한 이슈 추적기를 사용하지 않았는데 곧 이슈 추적기가 필요하다는 것을 절실히 깨닫게 되었다. 그 후 몇가지 사용자 지정솔루션에 시도하고 Google Code Project Hosting을 알고 Maps API issue Tracker를 만들게 되었다.
+When I started at Google, we did not use issue trackers for any of our APIs,
+and I soon realized that we really needed to. After trying a few custom
+solutions, I discovered `Google Code Project Hosting`_ and created the
+`Maps API issue tracker`_. Nowadays, most every Google API
+has an associated Google Code issue tracker.
 
-Google Code issue trackers는 모든 기능을 갖추고 있으며 다음을 포함하고 있다.
+The Google Code issue trackers are full-featured, including:
 
-* 댓글
-* 라벨
-* 템플릿
-* 별표
-* 이메일 알림
+* Commenting
+* Labels
+* Templates
+* Starring
+* Email Notification
 * RSS feeds
-* 사용자 지정 검색 및 정렬
-* 읽기/쓰기 가능한 HTTP API
+* Custom Search & Sort
+* Full Read/Write HTTP API
 * Wiki Pages
 
-나열된 기능은 모두 간단한 인터페이스를 가지고 있지만 사용자 지정 라벨과 템플릿을 지정하는 기능을 통하여 다양한 종류의 API를 사용자가 직접 관리 하도록 하였다 . 사용자 지정 도움말은 Issue Tracker official documentation에서 작성한 글을 볼 수 있다.
+They are both simple in their interface, but through the ability
+to specify custom labels and templates, they can be customized to support
+a wide variety of APIs. I've written up my customization tips here.
+You should also read through the `Issue Tracker official documentation`_.
 
 .. _`Maps API issue tracker`: http://gmaps-api-issues.googlecode.com
 .. _`Issue Tracker official documentation`: http://code.google.com/p/support/wiki/IssueTracker
@@ -107,117 +221,251 @@ Google Code issue trackers는 모든 기능을 갖추고 있으며 다음을 포
 Setup
 =====
 
-Google Code issue tracker를 사용할 준비가 되었다면 여기서 구성 방법의 설명과 함께 실습을 할 것이며 대부분“Administer->Issue Tracking”컨트롤 패널에서 구성 할 것이다.
+If you're going to use a Google Code issue tracker, here's a walkthrough of
+configuring it, with an explanation of what I've configured and why.
+Most of the following can be configured in the "Administer->Issue Tracking"
+control panel.
 
-라벨
+Labels
 ------
 
-“라벨”이란 라벨 이름과 속성의 구성으로 이루어진 이슈에 대한 기본적인 메타데이터이다. 예로 “ApiType-JavaScript”, “Type-Defect”같이 할 수 있다. 이슈 추적기는 프로젝트에서 일반적으로 사용되는 것들에 기초, 추천되는 라벨의 세트를 지정하지만 다른 라벨 또한 제안할 수 있다. 라벨을 사용할때 라벨을 검색, 정렬 할 수 있고 그것들의 결과를 링크 할 수 있다.(예로 Map API 버그 전체를 링크) 기본적으로 라벨을 아주 잘 이용하고 정의 한다면 이슈 추적기를 더 유용하게 사용 할 것이다.
+A "label" is basically metadata about an issue in the form of a label name and
+value - e.g. "ApiType-JavaScript", "Type-Defect". The issue trackers come with a
+set of suggested labels, based on those commonly used in software projects, but
+you can also suggest your own custom labels. When you use labels on issues, you
+can then search and sort by labels, and link to those results (e.g. all open
+Maps API bugs). Basically, labels are everything, and the more you use and
+customize labels, the more useful your issue tracker will become.
 
-상태 라벨
+Status label
 ^^^^^^^^^^^^
 
-특별한 상태의 항목에 “상태”라벨이 알맞다. 이 라벨은 이슈에 Open 이나 Close 되는 여부에 나타내며 이슈의 접근성에 미치게 된다. 기본적으로 검색은 사용자가 수정된 버그에 영향을 받지 않으며 Open 상태의 버그만 보여진다. 그러므로 이슈 추적기는 Open과 Close와 같은 여러 속성값을 지정 할 수 있다.
+One label has a bit of a special status - and that is, conveniently, the
+"Status" label. This label indicates to the issue tracker whether an issue is
+open or closed, and that affects the searchability of an issue. By default,
+searches are only performed on open bugs, as typically users aren't affected by
+fixed bugs. So, the issue tracker lets you designate the various values that
+equate to open versus closed.
 
-기본적인 상태값은 다음과 같다.
+The default status values are shown below:
 
 |statusdefault|
 
-잠시 동안 이와 같은 기본값만을 사용 해본 결과 원하던 방향으로 잘 동작하지 않았음을 바로 이해하게 되었다. 다음은 Google Maps API 이슈 추적기에 사용되는 상태 값들이다.
+After using those defaults for a while, I quickly realized that they didn't
+quite work for my needs. Here are the status values that I use in the `Google
+Maps API issue tracker`:
 
 |openclosed|
 
-변경한 내용과 그 이유는 다음과 같다.
+Here are the changes I made and why:
 
-* "Accepted" -> "Acknowledged/Confirmed": 기본 값들은 “네, 우리는 이슈를 확인 하였고 기록하였습니다,”이라는 말과 같이 지정하고 “수락”속성을 부여 하였다. 그러나 이 작업은 버그에는 탁월했지만 기능 요구에는 적절하지 못하였다. 개발자들은 우리가 기능 요구에 실제로 획득하는 의미를 “수락”이라고 생각해 보았고 그 요구들을 너무 오래 획득하는 이유가 궁금하였다.- 사실일때 우리는 간단해 우리는 유효한 요청을 간단하게 의미 하고 우리는 하루에 주어진 자원과 다른 개발자들의 유틸리티의 증거로 충족 할 수 있었다. 그래서 우리는 지금 버그에 “확인”이라고 한 후 버그를 스스로 복제하고  기능 요구는 “승인”으로 지정한 후 우리에 API의 범위에서 유효된 요구인지 결정하고 어떤 다른 것에 충족되지 않는지 확인한다.(오픈소스 라이브러리와 같은) 일화적으로 조금 덜 조롱 당하는 느낌이 들었다고 믿는다.
-* "NeedsMoreInfo": 개발자의 글에서는 확실한 버그인 것 같지만 충분하지 못한 정보를 제공받지 못하는 경우가 자주 있다. 그래서 우리는 그러한 이슈를 적어도 한번 확인 하였고 개발자로부터 자세한 내용을 기다라는 의미로 이 라벨을 부여한다. 일단 그들이 충분한 정보를 제공할 경우 다른 라벨을 적용하여 옮겨진다. 만약 오랜 시간동안 추가 정보를 입력하지 않으면 우리는 버그가 충분히 중요하지 않다고 판단하고 이슈를 Close한다.
-* "FixedNotReleased": 우리의 API코드는 내부에만 변경 되었고 다음 출시전 까지 개발자들은 이용할 수 없으며 우리는 내부적으로 고쳐졌을 때 바로 반영 할 수 없다. 하지만 버그의 경우 개발자 들이 수정완료가 임박했다는 것을 알게 하여서 그 들이 개발을 적절하게 계획 할 수 있도록 한다. 그리고 릴리즈때에 수정되었음을 알 수 있게 변경로그를 만들어 이슈의 리스트를 편리하게 찾게 하였다. 기능요구에는 이 라벨을 많이 사용하지 않는데 그 이유는 완성 후 깜짝 놀래 키기 위해서 이다. 종종 기능 요구에 대해서는 드믈게 사용하고 이후 완성 시켜 놀라게 한다. FixedNotReleased 지정은 가끔 익숙치 않는 개발자에게 혼동을 줄 수 있으므로 “지금 버그는 수정 되었으며 다음 릴리즈에 반영하겠습니다. 매주 릴리즈 합니다.”라는 구문으로 코멘트를 남겨야 한다.
+* "Accepted" -> "Acknowledged/Confirmed": The default values only contained one
+  way of saying "Yes, we've seen this issue and noted it as a real issue," and
+  that value was "Accepted." This worked fine for bugs, but not for feature
+  requests. Developers thought that "Accepted" meant that we were actually taking
+  on the feature request, and wondered why it was taking so long to fulfill their
+  requests - when in fact, we simply meant to say that it was a valid request, and
+  that we might fulfill it one day, given substantial resources and evidence of
+  its of its utility to other developers. So, we now use "Confirmed" for bugs,
+  after replicating the bug ourselves, and "Acknowledged" for feature requests,
+  after deciding it is a valid request for the scope of our API, and confirming it
+  isn't fulfilled in some other way (like by an open source library). Anecdotally,
+  I believe this has led to less developers feeling teased.
+* "NeedsMoreInfo": Oftentimes, a developer posts what sounds like a valid bug, but
+  doesn't provide enough information to replicate. So, we use this label to
+  indicate that we have reviewed the issue atleast once and are awaiting further
+  clarification from the developer. Once they provide enough info, it moves on to
+  one of the other labels. If they never provide the info after a substantial
+  amount of time, we can assume the bug was not important enough to them and close
+  it.
+* "FixedNotReleased": Since our API code changes happen internally and are not
+  available for developers until the next release of the API, we can't immediately
+  mark an issue as fixed when it's fixed internally. But, in the case of a bug, I
+  like to let developers know that a fix is imminent, so that they can plan their
+  own development accordingly. And at release time, I also find it handy to have a
+  list of the issues that I think were fixed in that release, so that I can easily
+  create a changelog. I will rarely use this for feature requests, since we often
+  like the fulfillment of those to be a surprise. It can sometimes confuse
+  developers who are new to the API when they see an issue marked as
+  FixedNotReleased, so it can be helpful to leave a comment like "This bug has
+  been fixed internally and the fix is expected to go out in the next release.
   Releases are weekly."
-* "PostElsewhere": 우리는 종종 이슈 추적도구와 상관없는 요구들을 포스팅하는 사용자들을 보게 된다. 그들은 포럼(즉 자신의 코드를 디버깅 해주길 바라는 개발자)에 속하거나 다른 이슈 추적기에 속해 있다. 이슈에 PostElsewhere를 지정할 때 어디로 그들의 문제를 올려야 할지 노트를 남기며 최대한 친절하게 하려고 시도한다.(고객지원에 끝임없이 전화 요청하는 것을 피하기 위해)
+* "PostElsewhere": We often get people posting requests in issue trackers that
+  don't quite belong there. They either belong in a forum (i.e. it's a developer
+  looking for help debugging their own code), or they belong in a different issue
+  tracker. When I mark an issue as PostElsewhere, I always leave a note about
+  where they should post their issue, and I try to be as nice as possible (to
+  avoid people feeling like they're on an endlessly redirected phone call with
+  customer support). It can be useful to review the PostElsewhere issues every so
+  often to see if the messaging should be changed to reduce the number of
+  misdirected issues.
 
 
-미리 정의된 사용자 지정 라벨
+Predefined custom labels
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-이슈 추적기는 이슈 타입, 우순순위, OS 등과 같은 속성 설정을 위해 미리 정의된 라벨의 세트를 추천한다.
+The issue tracker suggests the following set of predefined labels, for setting
+attributes like issue type, priority, OS, etc:
 
 |predefineddefault|
 
-프로젝트에 따라 그것의 대부분의 변경까지 아마도 끝내야 한다. (아니면 사용하지 않는). Maps API는 여기까지 만들어 왔다.
+Depending on your project, you will probably end up changing most of these (or
+not using them). Here's what I came up with for the Maps API:
 
 |predefinedall|
 
-* "Type": 제일 적당 한 값으로 “Defect”, “Enhancement” 속성값을 유지하였다. 근래 조금 더 일반적인 명명으로 “Bug”, “FeatureRequest”로 변경 할지도 고민 하고 있다.
-* "Component": 대부분의 이슈들은 실제 API Code 자체에서 나타내지만 일부 이슈들은 문서와 지도 데이터에 관련 되어 있다. 공학적인 문제에서 이들을 구분하기 위해 나는 “Docs”와 “Data”를 만들었다.
-* "ApiType": 이슈의 내용과 개발팀이 서로 다른 Maps APIs에 겹치는 이유 때문에 API 전부에 같은 이슈트래커를 사용하도록 결정 했다. 이슈를 구별되기 쉽게 만들었고 이와 같은 라벨을 만들었다. 또한 이슈가 여러 API들과 관련되면 해당 라벨들을 여러게 할당 하였다.
-* "Regression": 가장 최악의  버그는 중복되는 버그이다. 만약 무엇을 일했는데  개발자가 그리고 갑자기 작업을 중단 할 때 처음 것을 수정 했을 것이다. 나는 용이하게 중복 이슈를 볼수 있도록 이 라벨을 사용한다. 나는 대체로 중복일 때 라벨을 부여하고 “Regression-Yes”로 검색할 수 있게 하였다.
-* "Browser": Maps API의 대다수의 버그는 브라우저에 의존에 의한 것이며 특정 브라우저를 의존하는 웹기반 프로젝트에서 많은 버그가 나타났다. 그래서 특정 브라우저에 영향받는 브라우저-의존 버그에 이 라벨을 사용한다. 나는 우리의 IE6 전문가가 고친 버그를 찾을 때 할수 있고(IE6 전문가들에게는 짜증나지만 그 일들은 일어난다) 대부분의 골치거리가 어떤 원인인지 볼수 있게 분포를 시각화했다.
-* "Internal": 이 라벨은  다른 것들과 미리 정해지지 않았다는  것이라는 점이 다르다. 나는 이 라벨  우리의 버그 시스템의 연관된 이슈와  연결 하여 사용한다. (e.g. “Internal-1234567”) 내부와 외부 모두 지나간 버그는 성가시지만 처리하고, 우리는 외부에 비공개 코멘트 그리고 이슈로 변경된 코드를 첨부를 만들어 추적했다. 일부 동료들은 수리공스크립트 또는 크롬 확장기능에 유용한 시각화 기능으로 내부와 외부를 한번에 사용했다.
+* "Type": I retained only the "Defect" and "Enhancement" values, as I didn't find
+  a need for the others. I have contemplated changing those values to "Bug" and
+  "FeatureRequest" as that is the more common nomenclature these days.
+* "Component": Most issues are about the actual API code itself, but some issues
+  are about related components: the documentation, and the maps data. To
+  distinguish those from the engineering issues, I created components for them -
+  "Docs" and "Data". (And yes, I think that you should welcome developers filing
+  documentation bugs - documentation usability is just as important as API
+  usability).
+* "ApiType": Because of the overlap across the different Maps APIs (Flash, JS,
+  etc) both in terms of issues and the engineering team, I decided to use the same
+  issue tracker for all of the APIs. To make sure I could easily distinguish the
+  issues (in links and searches), I created this label and its values. As a bonus,
+  I can assign multiple values of this label to an issue if it crosses multiple
+  APIs.
+* "Regression": The worst kind of bugs are regressions. If something worked for a
+  developer and suddenly doesn't work, then that is the first thing you should
+  fix. To make sure I can easily see what current regression issues we have, I use
+  this label. I typically only set the label in the case that an issue is a
+  regression, and then search for "Regression-Yes".
+* "Browser": The vast majority of the Maps API bugs are browser dependent, and I
+  find that many bugs in web-based projects are browser-dependent. I use this
+  label to designate the affected browser(s) for browser-dependent issues. I can
+  then search for issues that our IE 6 experts can fix (it sucks to be known as an
+  IE6 expert, but these things happen), and visualize the distribution of issues
+  to see what browser is causing us the most headaches.
+* "Internal": This label is a bit different than the others, in that it has no
+  preset values. I use this label on an issue so that I can relate it to the
+  sister issue in our internal bug-tracking system (e.g. "Internal-1234567").
+  Though it can be a bit annoying to track issues both internally and externally,
+  we track externally so that we can make private comments and attach code
+  changelists to the issue. Some of my colleagues use greasemonkey scripts or
+  Chrome extensions to easily visualize both internal and external data at once.
 
-경고
+Caveat
 ^^^^^^
 
-프로젝트의 멤버는 이슈를 수정할 때 라벨을 부여 할 수 있다. 멤버가 아니면 코멘트  또는 이슈에 별표 만 가능하다. 만약 일부 라벨을 멤버가 아닌 사용자에게 할당 하였다면 가능 하고 그 외는 불가능하다.(즉 멤버가 아닌 사용자가 라벨을 지정하는 것을 바라지 않지만 IE8 이슈와 같은 특성화된 이슈는 환영할 것 이다) 그러나 다소 이러한 요구를 해결하기 위해 이슈 템플릿(다음 설명)을 사용 할 수 있다.
+Only members of a project can assign labels when editing an issue. Non-members
+can only leave comments or star issues. It would be handy if non-members were
+allowed to assign some labels to an issue, but not others (i.e. you wouldn't
+want a non-member to mark an issue as fixed, but you would welcome them
+characterizing it as an IE8 issue). You can use issue templates (described next)
+to somewhat solve this need, however.
 
 
-이슈 템플릿
+Issue Templates
 ---------------
 
-이슈 추적기에서 “New issue”를 클릭했을 때 기본 템플릿이 주어진 경우 다음과 같이 보여질 것이다.
+When a developer click "New issue" in an issue tracker, they are given a default
+template to fill out, shown below:
 
 |templatedefault|
 
-이 템플릿은  버그 복제에 대한 표준 질문을 제공하고  기본 “Type”과 “Priority” 라벨을 추가한다. 지금 이후로 당신의 제품에 대한 라벨 집합을 만들 것이며 당신은 아마도 당신의 고객의 요구에 따라 템플릿을 변경하기를 원할 것이고 또한 버그 및 기능 요구 템플릿를 만들기 원할 것이다. Maps API를 위해서 나는 특별한 템플릿을 만들었다. 그래서 해당 레이블을 지정하도록 하고 그들의 API에 관련된 템플릿을 개발자가 링크 하여 API에 특정 버그의 지침을 제공한다. 
+This template gives standard questions for bug replication, and adds default
+"Type" and "Priority" labels. Now, after you've created a set of labels for your
+product, you will probably also want to customize this template for your own
+needs, and you may also want to create more than just a bug and feature request
+template. For the Maps API, I created special templates for each API, so that I
+could link developers to the relevant template for their API, so that I could
+assign the appropriate labels, and so that I could provide API-specific bug
+reporting instructions.
 
 |templatemapsapi|
 
-이후 개발자들이 언제든지 사용 가능한 템플릿을 만들기를 원하였다. 나는 또한 개발자에 대한 경고로 일반 사용자 결함 보고서를 수정하였다.
+Since I wanted to make sure developers used templates whenever possible, I also
+modified the default generic user defect report to warn developers against using
+it:
 
 |templategeneric|
 
-당신은 또한  템플릿 이슈를 위한 기본 소유자 일일이 사용한다. 만약 당신이 이슈 진단의 청구에 특별한 프로젝트 맴버를 포함 시키기 원할 것이다. 그렇지만 효과 알림 필터 규칙으로 이룬다.(다음에 설명)
+You can also use templates to specify the default owner for issues, if you want
+to put a particular project member in charge of triaging the issues. However,
+you can accomplish a similar effect using notification filter rules (described
+below).
 
 
-리스트 & 그리드 뷰
+List & Grid View
 ----------------
 
-이슈 추적기는 이슈들을 시각적으로 다양하게 보여주고 시각화를 다양한 형태로 설정할 수 있다.
+The issue tracker provides various ways to visualize the issues, and numerous
+configuration options for the visualization.
 
-기본 뷰에는 리스트를 볼 수 있고 Issues”를 클릭하거나 검색을 할 때 개발자들이 살펴 볼 수 있게 한다.
+The default view is list view, and this is what the developer sees when clicking
+"Issues" or doing a search.
+This view shows one issue per row, and a subset of the labels as the columns.
 
 |listview|
 
-리스트 뷰를 보면 개발자들은 다음과 같이 컬럼들의 기본적인 정렬 그 이상으로 설정 할 수 있거나 다른 컬럼을 선택하여 보게 한다.(헤더에 right-hand에 “…”을 클릭으로)
+When looking at a list view, the developer can further configure it by sorting
+based on other columns (by clicking the arrows), or choosing to view other
+columns (by clicking the "..." in the top right-hand of the header row).
 
-만약 개발자가  개별로 정렬/라벨하기 원한다면 셋팅에서 설정할 수 있다. 처음본은 기본 라벨이다.
+If you want developers to see a particular sorting/labels by default (and you
+probably do), you can configure that in the settings. The default is based on
+the default labels:
 
 |listgrid|
 
-당신은 라벨에  따라 변경하고 가장 중요하게 생각하는 것을 쉽게 볼 수 있도록 표시한다.
+You should change that depending on your project labels, and on which you think
+are most important to be visualized at a glance. Here's what I chose for the
+Maps API:
 
 |listgridmapsapi|
 
-기본 옵션 그리고 통계에 의해 정렬하여 나의 옵션을 지정 한다. 방법은 가장 많은 별표인 이슈를 상위로 한다.이 천국과 지옥의 양쪽 - 그것들을 검색하지 않고 찾아 확률이 높은 공통 요구사항에 개발자들이 찾는 방법이다. 하지만 이 방법은 많은 별표의 이슈에게 별표를 더 주는 경향이 있다. 그 이슈는 다른 것들 보다 그것에 표시하기 때문이다.그냥 그 것의 별표수를 기반의 이슈들은 평가할 때 마음대로 해라.
+Note that both the default options and my options specified that the sorting is
+by stars. That means that the most starred issues will be at the top. This is
+both a blessing and a curse - it means that developers looking for common
+requests will be more likely to find them without searching, but it also means
+that the most starred issues will tend to get more starred, since those issues
+are shown to them more than others.  Just keep that in mind when you're
+evaluating issues based on their starred count.
 
-다른 뷰로 그리드 뷰가 있고 이것은 더 자주 사용하게 될 정말 멋진 뷰이다. 여러차원에서 이슈를 시각화 하고 이슈를 보여질때 상태와 다른 라벨값을 가지는 것에 느낌을 줄 수 있다. 다음은 각종 Maps API를 통해 이슈의 상태를 시각화 하는 예제 그리드 뷰이다. 곧 이 것을 통해 어떤 것을 진료하고 자원을 사용할지 알 수 있다.
+The other view is grid view, and it is a very cool view that I really should use
+more often. It lets you visualize issues in multiple dimensions, and can give
+you a better feel for your issue distribution across status and other label
+values. Here's an example grid visualizing the status of issues across the
+various Maps APIs. Immediately, I know which APIs need more triaging and
+resources thrown at them.
 
 |gridview|
 
-이것은 유용한 그리드 시각화를 북마크에 추가하고 한 달에 한번 방문하여 동향 또는 지원 요청을 보기에 좋다. 나는 내가 할만큼 그리드 뷰를 사용하지 않은 것을 인정한다. 그래서 추가 도움말이 없다.
+It's good to bookmark useful grid visualizations and revisit them once a month,
+to spot trends or support needs. I will admit that I haven't used grid view as
+much as I should, so I don't have further tips past that.
 
 
-Email 알림
+Email notifications
 -------------------
 
-이슈 추적기는 특정주소로 이슈의 활동의 모든 알림을 보내는 것을 선택 할 수 있고 또한 특정 주소에 라벨에 따른 종속 알림을 보내는 규칙을 설정할 수 있다. 즉 이슈 변경을 개인 및 그룹에게 항상 알 수 있게 알림 기능을 할 수 있다.
+The issue tracker lets you choose to send all notifications of issue activity
+(new issues, changed issues, commented issues) to a particular address, and it
+also lets you set rules to send label-dependent notifications to a particular
+address. You can use this feature to make sure that issue changes are always
+brought to the attention of a person and/or group of people.
 
-기본 설정은 누구안테도 알림을 보내지 않는 것 이다.
+The default settings is to not send to anyone:
 
 |notificationsdefault|
 
-이 설정은 버그의 종교적 문제와 잦은 기초적인 모르는 문제들은 일부 제출된 버그는 아주 시급할 수 있으므로 몇 시간 이내 해결될 필요가 있으며 세심한 사람에게 버그를 보내것을 추천한다. 당신은 또한 제품 팀 또는 실제 제품에 포럼 과 같은 구글 그룹에 버그 전송을 선택할 수 있다. 편지에 버그를 보내기를 결심 했다면 그들이 시끄러워 질 것을 명심해야 하고 그룹에 대한 서약의 개발자를 망칠 수 있으며 특정 개발자 커뮤니티에 따라 다르다.
+This setting is okay if you are very religious about bug triages and do them on
+a frequent basis, but as some filed bugs may in fact be quite urgent and need to
+be addressed within hours, I recommend sending all bugs to some attentive
+individual. You can also choose to send bugs to a Google Group, like one that
+contains just your product team, or one that is a help forum for the actual
+product. If you decide to send bugs to the latter, keep in mind that they can
+become quite noisy, and may deter developers from subscribing to the group. It
+very much depends on your particular developer community.
 
-'Maps API utility library'를  들어, 나는 프로젝트 개발자의 메일링 리스트에 모든 새로운 이슈를 보내고 개발자가 더 많은 이슈를 가지고 응답할 가능성이 있다. Maps API는 자신에게 이슈들을 보내고 동료들에게 API-specific 이슈를 보낸다.
+For the open source `Maps API utility library`_, I send all new issues to the
+mailing list of project developers, and this makes the developers more likely to
+pick up an issue and respond to it. For the Maps API, I send all issues to
+myself, and then send API-specific issues to the relevant colleagues:
 
 |notifymapsapi|
 
@@ -227,13 +475,23 @@ Email 알림
 Homepage
 --------
 
-라벨, 템플릿  그리고 검색을 만드는데 시간을 들이면 개발자들은 더 쉽고 편하게  찾을 수 있을 것이다. 또한 모든 관련 링크를 포함하는 프로젝트(Administer -> Project Summary)의 홈페이지를 수정할 수 있다.
+After you've spent all that time creating custom labels, templates, and
+searches, you will want to make sure developers can find them easily. One thing
+you can do is modify the home page of your project (in Administer->Project
+Summary) to include all the relevant links.
 
-지도 API에서는 각 API에 대한 부분 목록을 다음에 링크하고, 버그 및 기능 요청을 탐색 버그 및 기능 요청을 파일에 제공하고 있다. 개발자들이 이슈 추적도구로 오는 가장 일반적인 이유 이다.
+For the Maps API, I list a section for each API, and then provide links to
+browse bugs & feature requests, and to file bugs & feature requests. These links
+address the most common reasons for developers coming to the issue tracker.
 
 |homepage|
 
-일부 개발자는 그 링크를 무시 하고 “Issues”탭을 클릭하며 앞에 놓여진 이슈의 많은 리스트에 좌절 할 수 있다. 만약 당신은 개발자들을 찾는게 혼란스럽다면 당신은 wiki페이지로 이슈탭을 대신 할 수 있고 wiki페이지는 당신의 제품을 위한 이슈 트래킹 작업을 기술 할 수 있다. 다음은 'OpenSocial Issue tracker'의 방법이다.
+Some developers may ignore those links, click on the "Issues" tab, and be unsure
+how to deal with the long list of issues in front of them. If you find
+developers getting confused by that experience, you can replace the Issues tab
+with a wiki page (in Administer->Tabs), and that wiki page can describe how
+issue tracking works for your product. The `OpenSocial issue tracker`_ takes that
+route:
 
 |opensocial|
 
@@ -253,4 +511,3 @@ Homepage
 .. |notifymapsapi| image:: ./screenshot_issuetracking_notify_mapsapi.png
 .. |homepage| image:: ./screenshot_issuetracking_homepage.png
 .. |opensocial| image:: ./screenshot_issuetracking_opensocial.png
-
