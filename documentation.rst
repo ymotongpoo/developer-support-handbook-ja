@@ -202,7 +202,7 @@ from our open source Maps API library.
 
 |mapsv3reference|
 
-.. |mapsv3reference| image:: ./screenshot_mapsv3reference.png
+.. |mapsv3reference| image:: ./img/screenshot_mapsv3reference.png
 .. _JsDoc Toolkit: http://code.google.com/p/jsdoc-toolkit/
 .. _Maps API v3 reference: http://code.google.com/apis/maps/documentation/javascript/reference.html
 .. _the template: http://gmaps-utility-library-dev.googlecode.com/svn/trunk/util/docs/template/
@@ -220,7 +220,7 @@ reference.
 
 |gdatareference|
 
-.. |gdatareference| image:: ./screenshot_pydoc.png
+.. |gdatareference| image:: ./img/screenshot_pydoc.png
 .. _pydoc: http://docs.python.org/library/pydoc.html
 .. _Python client library: http://gdata-python-client.googlecode.com/svn/trunk/pydocs/gdata.html
 
@@ -253,7 +253,7 @@ After starting with pydoc, we switched over to using Sphinx for the
 
 |wavereference|
 
-.. |wavereference| image:: ./screenshot_wavereference.png
+.. |wavereference| image:: ./img/screenshot_wavereference.png
 .. _Sphinx: http://sphinx.pocoo.org/
 .. _reStructuredText: http://sphinx.pocoo.org/rest.html
 .. _Wave Robots API Python library: http://wave-robot-python-client.googlecode.com/svn/trunk/pydocs/index.html
@@ -276,7 +276,7 @@ we expected developers to be coming from both fronts.
 
 |flashreference|
 
-.. |flashreference| image:: ./screenshot_flashreference.png
+.. |flashreference| image:: ./img/screenshot_flashreference.png
 .. _ASDoc: http://livedocs.adobe.com/flex/3/html/help.html?content=asdoc_1.html
 
 
@@ -302,7 +302,7 @@ such as the `Google Analytics Data Export API`_ and `Google Sites API`_.
 
 |analyticschangelog|
 
-.. |analyticschangelog| image:: ./screenshot_analyticschangelog.png
+.. |analyticschangelog| image:: ./img/screenshot_analyticschangelog.png
 .. _wiki pages: http://code.google.com/p/gmaps-api-issues/w/list
 .. _Google Analytics Data Export API: http://code.google.com/apis/analytics/docs/gdata/changelog.html
 .. _Google Sites API: http://code.google.com/apis/sites/changelog.html
@@ -400,9 +400,9 @@ solution is searchable and linkable.
 .. _Wave Samples Gallery: http://wave-samples-gallery.appspot.com/
 .. _open-sourced: http://google-wave-resources.googlecode.com/svn/trunk/samples-gallery/
 .. _Google Data APIs: http://code.google.com/apis/gdata/samples.html
-.. |mapsgallery| image:: ./screenshot_mapsdemogallery.png
-.. |wavegallery| image:: ./screenshot_wavesamplesgallery.png
-.. |gdatagallery| image:: ./screenshot_googledatasamples.png
+.. |mapsgallery| image:: ./img/screenshot_mapsdemogallery.png
+.. |wavegallery| image:: ./img/screenshot_wavesamplesgallery.png
+.. |gdatagallery| image:: ./img/screenshot_googledatasamples.png
 
 
 .. _code-playground:
@@ -470,9 +470,9 @@ to any set of documentation.
 .. _OAuth playground: http://googlecodesamples.com/oauth_playground/
 .. _gdata-samples repository: http://code.google.com/p/gdata-samples/source/browse/#svn/trunk/oauth_playground
 .. _Flickr API explorer: http://www.flickr.com/services/api/explore/?method=flickr.photos.search
-.. |ajaxplayground| image:: ./screenshot_ajaxplayground.png
-.. |oauthplayground| image:: ./screenshot_oauthplayground.png
-.. |flickrexplorer| image:: ./screenshot_flickrexplorer.png
+.. |ajaxplayground| image:: ./img/screenshot_ajaxplayground.png
+.. |oauthplayground| image:: ./img/screenshot_oauthplayground.png
+.. |flickrexplorer| image:: ./img/screenshot_flickrexplorer.png
 
 .. _developers-guide:
 
@@ -517,7 +517,7 @@ explore them independently in the future.
 .. _Maps API Developer's Guide: http://code.google.com/apis/maps/documentation/javascript/basics.html
 .. _few paragraphs: http://www.flickr.com/services/api/misc.overview.html
 .. _user authentication: http://www.flickr.com/services/api/misc.userauth.html
-.. |mapsdevguide| image:: ./screenshot_mapsdevguide.png
+.. |mapsdevguide| image:: ./img/screenshot_mapsdevguide.png
 
 
 .. _articles:
@@ -574,4 +574,4 @@ sense.
 .. _Using Debugging Tools with the Maps API: http://code.google.com/apis/maps/articles/debuggingmaps.html
 .. _Debugging Wave Robots: http://code.google.com/apis/wave/articles/robotdebugging.html
 .. _basic article: http://code.google.com/apis/maps/articles/phpsqlajax.html
-.. |screencast| image:: ./screenshot_mapsscreencast.png
+.. |screencast| image:: ./img/screenshot_mapsscreencast.png

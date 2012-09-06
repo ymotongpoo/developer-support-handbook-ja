@@ -496,18 +496,18 @@ route:
 |opensocial|
 
 .. _`OpenSocial issue tracker` : http://code.google.com/p/opensocial-resources/wiki/IssuesTab?tm=3
-.. |statusdefault| image:: ./screenshot_issuetracking_statusdefault.png
-.. |openclosed| image:: ./screenshot_issuetracking_openclosed.png
-.. |predefineddefault| image:: ./screenshot_issuetracking_predefined_default.png
-.. |predefinedall| image:: ./screenshot_issuetracking_predefined_all.png
-.. |templatedefault| image:: ./screenshot_issuetracking_template_default.png
-.. |templatemapsapi| image:: ./screenshot_issuetracking_template_mapsapi.png
-.. |templategeneric| image:: ./screenshot_issuetracking_template_generic.png
-.. |listview| image:: ./screenshot_issuetracking_listview.png
-.. |listgrid| image:: ./screenshot_issuetracking_listgrid.png
-.. |listgridmapsapi| image:: ./screenshot_issuetracking_listgrid_mapsapi.png
-.. |gridview| image:: ./screenshot_issuetracking_gridview.png
-.. |notificationsdefault| image:: ./screenshot_issuetracking_notifications_default.png
-.. |notifymapsapi| image:: ./screenshot_issuetracking_notify_mapsapi.png
-.. |homepage| image:: ./screenshot_issuetracking_homepage.png
-.. |opensocial| image:: ./screenshot_issuetracking_opensocial.png
+.. |statusdefault| image:: ./img/screenshot_issuetracking_statusdefault.png
+.. |openclosed| image:: ./img/screenshot_issuetracking_openclosed.png
+.. |predefineddefault| image:: ./img/screenshot_issuetracking_predefined_default.png
+.. |predefinedall| image:: ./img/screenshot_issuetracking_predefined_all.png
+.. |templatedefault| image:: ./img/screenshot_issuetracking_template_default.png
+.. |templatemapsapi| image:: ./img/screenshot_issuetracking_template_mapsapi.png
+.. |templategeneric| image:: ./img/screenshot_issuetracking_template_generic.png
+.. |listview| image:: ./img/screenshot_issuetracking_listview.png
+.. |listgrid| image:: ./img/screenshot_issuetracking_listgrid.png
+.. |listgridmapsapi| image:: ./img/screenshot_issuetracking_listgrid_mapsapi.png
+.. |gridview| image:: ./img/screenshot_issuetracking_gridview.png
+.. |notificationsdefault| image:: ./img/screenshot_issuetracking_notifications_default.png
+.. |notifymapsapi| image:: ./img/screenshot_issuetracking_notify_mapsapi.png
+.. |homepage| image:: ./img/screenshot_issuetracking_homepage.png
+.. |opensocial| image:: ./img/screenshot_issuetracking_opensocial.png

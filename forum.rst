@@ -246,10 +246,10 @@ the democratic way, and it's the simplest form of feedback. But it's not that
 simple, as you can now see. When using a forum with ratings or deciding whether
 to enable ratings on your forum, keep the above lessons in mind.
 
-.. |phpbb| image:: ./screenshot_phpbb.png
-.. |groupsrating| image:: ./screenshot_groupsratings.png
-.. |u2urating| image:: ./screenshot_u2uratings.png
-.. |stackoverflow| image:: ./screenshot_stackoverflow.png
+.. |phpbb| image:: ./img/screenshot_phpbb.png
+.. |groupsrating| image:: ./img/screenshot_groupsratings.png
+.. |u2urating| image:: ./img/screenshot_u2uratings.png
+.. |stackoverflow| image:: ./img/screenshot_stackoverflow.png
 
 
 .. _badging-system:
@@ -275,7 +275,7 @@ Ogre forum:
 
 |ogre|
 
-.. |ogre| image:: ./screenshot_phpbbbadges.png
+.. |ogre| image:: ./img/screenshot_phpbbbadges.png
 
 .. Ref: http://www.ogre3d.org/forums/viewtopic.php?f=1&t=52312#wrap
 .. TODO: Encouraging top posters

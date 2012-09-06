@@ -305,8 +305,8 @@ from having an informative blog post.
 .. _ArcGIS: http://googlegeodevelopers.blogspot.com/2008/08/using-google-maps-to-visualize-arcgis.html
 .. _posting guidelines: http://code.google.com/p/gmaps-utility-library-dev/wiki/BlogPostGuidelines
 .. _Marker Tracker launch post: http://googlemapsapi.blogspot.com/2008/03/markertracker-10-which-way-did-he-go.html
-.. |orbitzblog| image:: ./screenshot_orbitzblog.png
-.. |markertrackerblog| image:: ./screenshot_markertrackerblog.png
+.. |orbitzblog| image:: ./img/screenshot_orbitzblog.png
+.. |markertrackerblog| image:: ./img/screenshot_markertrackerblog.png
 
 Trusted Testers
 ===============
